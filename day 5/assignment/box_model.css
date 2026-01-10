@@ -1,0 +1,138 @@
+.task1{
+    font-size: 12px;
+    width: 260px;
+    height: 18px;
+    padding: 12px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(0, 0, 0);
+    margin-left: 20px;
+}
+
+.task2{
+    font-size: 12px;
+    width: 310px;
+    height: 12px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 40px;
+    border-width: 3px;
+    border-style: dashed;
+    border-color: rgb(0, 0, 0);
+    margin-left: 50px;
+}
+
+.task3{
+    font-size: 12px;
+    width: 340px;
+    padding-top: 0.5px; 
+    padding-bottom: 1px;
+    padding-left: 40px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(255, 0, 0);
+}
+
+.task4{
+    font-size: 12px;
+    width: 270px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 40px;
+    margin-left: 20px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(0, 0, 0);
+}
+
+.task5{
+    font-size: 12px;
+    width: 300px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-width: 4px;
+    border-style: solid;
+    border-color: rgb(44, 0, 44);
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.task6{
+    font-size: 12px;
+    width: 250px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(0, 0, 0);
+}
+
+.task7{
+    font-size: 12px;
+    width: 250px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(0, 0, 0);
+    margin-bottom: 20px;
+}
+
+.task8{
+    font-size: 12px;
+    width: 270px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(0, 0, 0);
+}
+
+.task9{
+    font-size: 12px;
+    width: 300px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-left: 10px;
+    border-width: 3px;
+    border-style: solid;
+    border-color: rgb(0, 75, 0);
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.task10{
+    font-size: 12px;
+    width: 230px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 20px;
+    border-style: solid;
+    border-color: rgb(0, 0, 0);
+    border-width: 1.6px;
+}
+
+.task11{
+    font-size: 12px;
+    width: 300px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-style: solid;
+    border-color: rgb(207, 207, 0);
+    border-width: 2px;
+    box-sizing: border-box;
+}
+
+.task12{
+    font-size: 12px;
+    width: 250px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-style: solid;
+    border-color: rgb(0, 0, 0);
+    border-width: 2px;
+    box-sizing: border-box;
+}
