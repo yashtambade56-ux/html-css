@@ -24,6 +24,10 @@ HTML with CSS styling (colors, text, layout)
 Day 05  
 CSS box model practice (margin, padding, border)
 
+Day 06  
+Built a basic HTML & CSS website
+
+
 ---
 
 ## Tools used
