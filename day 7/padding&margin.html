@@ -1,0 +1,165 @@
+<html>
+<head>
+    <title>Box Model and Flex Tasks</title>
+
+    <style>
+        body{
+            font-family: Arial;
+            background: rgb(248,248,248);
+        }
+        h2{
+            margin-top: 40px;
+        }
+        .box{
+            border: 2px solid black;
+            padding: 10px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>Task 1 Content vs Padding</h2>
+<div class="box" style="padding:20px;background:rgb(245,245,235);">Padding 20</div>
+<div class="box" style="padding:40px;background:rgb(238,238,220);">Padding 40</div>
+<div class="box" style="padding:80px;background:rgb(230,230,205);">Padding 80</div>
+
+<hr>
+
+<h2>Task 2 Content vs Margin</h2>
+<div class="box" style="margin:40px;background:rgb(235,240,235);">Margin 40</div>
+
+<hr>
+
+<h2>Task 3 Padding and Background</h2>
+<div class="box" style="padding:30px;background:rgb(240,240,230);">Padding Space</div>
+<div class="box" style="margin:30px;background:rgb(240,240,230);">Margin Space</div>
+
+<hr>
+
+<h2>Task 4 Side Spacing</h2>
+<div class="box" style="padding:10px 50px 30px 70px;background:rgb(232,236,240);">Padding Sides</div>
+<div class="box" style="margin:60px 20px;background:rgb(232,236,240);">Margin Sides</div>
+
+<hr>
+
+<h2>Task 5 Invalid and Extreme</h2>
+<div class="box" style="padding:-20px;background:rgb(240,220,220);">Padding -20</div>
+<div class="box" style="margin:-20px;background:rgb(240,220,220);">Margin -20</div>
+
+<hr>
+
+<h2>Task 6 Margin Collapse</h2>
+<div class="box" style="margin-bottom:50px;background:rgb(230,230,230);">Box 1</div>
+<div class="box" style="margin-top:30px;background:rgb(230,230,230);">Box 2</div>
+
+<hr>
+
+<h2>Task 7 Inline vs Block</h2>
+<div class="box" style="background:rgb(225,230,235);">Div</div>
+<span class="box" style="display:inline-block;background:rgb(235,225,230);">Span</span>
+
+<hr>
+
+<h2>Task 8 Flex Introduction</h2>
+<div style="display:flex;gap:10px;">
+<div class="box" style="background:rgb(225,235,235);">1</div>
+<div class="box" style="background:rgb(225,235,235);">2</div>
+<div class="box" style="background:rgb(225,235,235);">3</div>
+</div>
+
+<hr>
+
+<h2>Task 9 Padding in Flex</h2>
+<div style="display:flex;gap:10px;">
+<div class="box" style="padding:40px;background:rgb(230,240,230);">A</div>
+<div class="box" style="padding:10px;background:rgb(230,240,230);">B</div>
+</div>
+
+<hr>
+
+<h2>Task 10 Margin vs Gap</h2>
+<div style="display:flex;gap:20px;">
+<div class="box" style="background:rgb(240,230,225);">X</div>
+<div class="box" style="background:rgb(240,230,225);">Y</div>
+</div>
+
+<hr>
+
+<h2>Task 11 Flex Direction</h2>
+<div style="display:flex;flex-direction:column;gap:10px;">
+<div class="box" style="background:rgb(225,225,235);">Top</div>
+<div class="box" style="background:rgb(225,225,235);">Bottom</div>
+</div>
+
+<hr>
+
+<h2>Task 12 Justify Content</h2>
+<div style="display:flex;justify-content:space-between;">
+<div class="box" style="background:rgb(240,240,220);">Left</div>
+<div class="box" style="background:rgb(240,240,220);">Right</div>
+</div>
+
+<hr>
+
+<h2>Task 13 Align Items</h2>
+<div style="display:flex;align-items:center;height:150px;background:rgb(235,235,235);">
+<div class="box" style="padding:40px;background:rgb(240,225,225);">Center</div>
+</div>
+
+<hr>
+
+<h2>Task 14 Auto Margin</h2>
+<div style="display:flex;">
+<div class="box" style="background:rgb(225,230,240);">Start</div>
+<div class="box" style="margin-left:auto;background:rgb(225,230,240);">End</div>
+</div>
+
+<hr>
+
+<h2>Task 15 Button</h2>
+<button style="padding:15px 30px;margin:20px;background:rgb(230,235,245);">
+Button
+</button>
+
+<hr>
+
+<h2>Task 16 Card</h2>
+<div class="box" style="width:260px;background:rgb(245,245,245);">
+<img src="https://t3.ftcdn.net/jpg/05/19/85/24/240_F_519852457_9qZzSbCBsAaAM2KTHrbnTjt6LXcG6S9T.jpg" width="100%">
+<h3>Title</h3>
+<p>Text</p>
+<button style="padding:10px 20px;background:rgb(230,235,245);">Action</button>
+</div>
+
+<hr>
+
+<h2>Task 17 Box Size Illusion</h2>
+<div class="box" style="width:200px;height:100px;padding:40px;background:rgb(235,235,220);">Padding</div>
+<div class="box" style="width:200px;height:100px;margin:40px;background:rgb(235,235,220);">Margin</div>
+
+<hr>
+
+<h2>Task 18 Box Sizing</h2>
+<div class="box" style="width:150px;padding:40px;box-sizing:border-box;background:rgb(225,240,235);">
+Box Sizing
+</div>
+
+<hr>
+
+<h2>Task 19 Vertical Center</h2>
+<div style="display:flex;align-items:center;justify-content:center;height:150px;background:rgb(235,235,235);">
+<div class="box" style="background:rgb(225,230,240);">Centered</div>
+</div>
+
+<hr>
+
+<h2>Task 20 Final Rule Demo</h2>
+<div style="display:flex;gap:20px;">
+<div class="box" style="padding:20px;background:rgb(230,240,230);">Padding</div>
+<div class="box" style="margin:20px;background:rgb(240,230,230);">Margin</div>
+</div>
+
+</body>
+</html>
