@@ -37,7 +37,8 @@ Learn CSS Grid for more complex layout
 
 ## Project
 
-
+1. Makar Sankranti Website – info/celebration website
+2. Photography Application – showcase photos or portfolio
 
 ---
 
