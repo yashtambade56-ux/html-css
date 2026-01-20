@@ -27,6 +27,17 @@ CSS box model practice (margin, padding, border)
 Day 06  
 Built a basic HTML & CSS website
 
+Day 07  
+Learn modern layout techniques
+
+Day 08  
+Learn CSS Grid for more complex layout
+
+---
+
+## Project
+
+
 
 ---
 
