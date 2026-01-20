@@ -1,0 +1,26 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 15px;
+    border: 2px solid black;
+    padding: 10px;
+}
+
+.box {
+    background-color: rgb(200, 220, 255);
+    border: 1px solid black;
+    padding: 15px;
+}
+
+.span-6 {
+    grid-column: span 6;
+}
+
+.span-3 {
+    grid-column: span 3;
+}

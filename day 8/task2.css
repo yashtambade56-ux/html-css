@@ -1,0 +1,19 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.container {
+    display: grid;
+    border: 2px solid black;
+    padding: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+}
+
+.child {
+    background-color: rgb(109, 184, 199);
+    border: 1px solid black;
+    padding: 10px;
+    margin: 5px;
+}
