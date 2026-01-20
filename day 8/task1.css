@@ -1,0 +1,17 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.container {
+    display: grid;
+    border: 2px solid black;
+    padding: 10px;
+}
+
+.child {
+    background-color: rgb(141, 255, 226);
+    border: 1px solid black;
+    padding: 10px;
+    margin: 5px;
+}
