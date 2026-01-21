@@ -39,6 +39,7 @@ Learn CSS Grid for more complex layout
 
 1. Makar Sankranti Website – info/celebration website
 2. Photography Application – showcase photos or portfolio
+3. Travel Destinations Explorer – interactive travel gallery website
 
 ---
 
