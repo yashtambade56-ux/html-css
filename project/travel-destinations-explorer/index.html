@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Destinations Explorer</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            color: #fff;
+            background: url('https://images.unsplash.com/photo-1477346611705-65d1883cee1e?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZGFyayUyMG1vdW50YWluc3xlbnwwfHwwfHx8MA%3D%3D') no-repeat center center fixed;
+            background-size: cover;
+            overflow-x: hidden;
+        }
+
+        header {
+            text-align: center;
+            padding: 30px 20px;
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(5px);
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            gap: 20px;
+            padding: 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        aside {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 15px;
+            overflow-x: auto;
+            padding-bottom: 10px;
+            scroll-behavior: smooth;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            text-align: center;
+            backdrop-filter: blur(5px);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(120deg, rgba(255, 0, 150, 0.3), rgba(0, 200, 255, 0.3));
+            opacity: 0.4;
+            transition: opacity 0.5s;
+        }
+
+        .card:hover::after {
+            opacity: 0.7;
+        }
+
+        .card img {
+            width: 100%;
+            display: block;
+            border-radius: 10px;
+        }
+
+        .card p {
+            padding: 10px;
+            font-weight: bold;
+            text-shadow: 1px1px2px rgba(0, 0, 0, 0.6);
+        }
+
+        .card:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.4);
+            margin-top: 20px;
+            backdrop-filter: blur(5px);
+        }
+
+        /* Animated gradient background overlay */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(255, 0, 150, 0.2), rgba(0, 200, 255, 0.2));
+            z-index: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Travel Destinations Explorer</h1>
+        <p>Explore the world, one place at a time!</p>
+    </header>
+
+    <main>
+        <aside>
+            <h3>Filters</h3>
+            <ul>
+                <li><input type="checkbox"> All</li>
+                <li><input type="checkbox"> Beaches</li>
+                <li><input type="checkbox"> Mountains</li>
+                <li><input type="checkbox"> Cities</li>
+                <li><input type="checkbox"> Heritage</li>
+            </ul>
+            <br>
+            <h4>Choose a category to explore beautiful destinations from around the world</h4>
+
+                    <aside>
+                <h4>Famous Locations near by me!!!</h4>
+
+                <section class="gallery">
+
+                    <div class="card">
+                        <img src="https://media-cdn.tripadvisor.com/media/photo-s/04/c9/53/17/fort-raigad.jpg" alt="Raigad Fort">
+                        <p>Raigad Fort</p>
+                    </div> 
+                    <div class="card">
+                        <img src="https://images.pexels.com/photos/28867943/pexels-photo-28867943.jpeg" alt="Mumbai">
+                        <p>Mumbai</p>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.pexels.com/photos/34234571/pexels-photo-34234571.jpeg" alt="Pune">
+                        <p>Pune</p>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.pexels.com/photos/31912391/pexels-photo-31912391.jpeg" alt="Ellora Caves">
+                        <p>Ellora Caves</p>
+                    </div>
+                    <div class="card">
+                        <img src="https://media-cdn.tripadvisor.com/media/photo-s/0c/aa/8b/d9/view-from-the-curve-of.jpg" alt="Lonavala">
+                        <p>Lonavala</p>
+                    </div>
+                    <div class="card">
+                        <img src="https://th.bing.com/th/id/OIP.MM5t6PhLBvMgp7Vr5MZSxwHaE0?w=258&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="Mahabaleshwar">
+                        <p>Mahabaleshwar</p>
+                    </div>
+                </section>
+            </aside>
+        </aside>
+
+        <section class="gallery">
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8UGFyaXN8ZW58MHx8MHx8fDA%3D" alt="Paris">
+                <p>Paris</p>
+                <p>The capital of France, famous for art, fashion, cafés, and the Eiffel Tower.</p>
+            </div>
+            <div class="card">
+                <img src="https://plus.unsplash.com/premium_photo-1677829177642-30def98b0963?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8QmFsaXxlbnwwfHwwfHx8MA%3D%3D" alt="Bali">
+                <p>Bali</p>
+                <p>A beautiful Indonesian island known for beaches, temples, and peaceful nature.</p>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1581793745862-99fde7fa73d2?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8TGFkYWtofGVufDB8fDB8fHww" alt="Ladakh">
+                <p>Ladakh</p>
+                <p>A high-altitude region in India with stunning mountains, lakes, and monasteries.</p>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fFRva3lvfGVufDB8fDB8fHww" alt="Tokyo">
+                <p>Tokyo</p>
+                <p>Japan’s capital city, where modern technology blends with traditional culture.</p>
+            </div>
+            <div class="card">
+                <img src="https://images.pexels.com/photos/8922245/pexels-photo-8922245.jpeg" alt="New York">
+                <p>New York</p>
+                <p>A global city known for its skyline, culture, and fast-paced life.</p>
+            </div>
+            <div class="card">
+                <img src="https://images.pexels.com/photos/19736357/pexels-photo-19736357.jpeg" alt="London">
+                <p>London</p>
+                <p>England’s capital, rich in history, museums, and iconic architecture.</p>
+            </div>
+            <div class="card">
+                <img src="https://images.pexels.com/photos/804915/pexels-photo-804915.jpeg" alt="Dubai">
+                <p>Dubai</p>
+                <p>A modern desert city known for luxury, innovation, and skyscrapers.</p>
+            </div>
+            <div class="card">
+                <img src="https://images.pexels.com/photos/15263661/pexels-photo-15263661.jpeg" alt="Goa">
+                <p>Goa</p>
+                <p>India’s coastal destination famous for relaxed beaches and vibrant culture.</p>
+            </div>
+            <div class="card">
+                <img src="https://images.pexels.com/photos/31776512/pexels-photo-31776512.jpeg" alt="Manali">
+                <p>Manali</p>
+                <p>A hill town surrounded by forests, rivers, and mountain views.</p>
+            </div>
+            <div class="card">
+                <img src="https://images.pexels.com/photos/31324045/pexels-photo-31324045.jpeg" alt="Varanasi">
+                <p>Varanasi</p>
+                <p>One of the world’s oldest cities, known for spiritual traditions.</p>
+            </div>
+            <div class="card">
+                <img src="https://images.pexels.com/photos/9149402/pexels-photo-9149402.jpeg" alt="Maldives">
+                <p>Maldives</p>
+                <p>A tropical paradise with crystal-clear waters and luxurious resorts.</p>
+            </div>
+            <div class="card">
+                <img src="https://images.pexels.com/photos/14721497/pexels-photo-14721497.jpeg" alt="Hampi">
+                <p>Hampi</p>
+                <p>An ancient village in India with stunning ruins and landscapes.</p>
+            </div>
+            <div class="card">
+                <img src="https://images.pexels.com/photos/3581369/pexels-photo-3581369.jpeg" alt="Jaipur">
+                <p>Jaipur</p>
+                <p>The Pink City, known for its palaces, forts, and rich culture.</p>
+            </div>
+            <div class="card">
+                <img src="https://images.pexels.com/photos/17870091/pexels-photo-17870091.jpeg" alt="Kerala">
+                <p>Kerala</p>
+                <p>God’s Own Country, famous for backwaters, beaches, and hill stations.</p>
+            </div>
+            <div class="card">
+                <img src="https://images.pexels.com/photos/17971796/pexels-photo-17971796.jpeg" alt="Rishikesh">
+                <p>Rishikesh</p>
+                <p>The Yoga Capital of the World, nestled along the Ganges River.</p>
+            </div>
+            <div class="card">
+                <img src="https://images.pexels.com/photos/31018819/pexels-photo-31018819.jpeg" alt="Darjeeling">
+                <p>Darjeeling</p>
+                <p>A hill town in eastern India, known for tea gardens and mountain views.</p>
+            </div>
+            
+            
+        </section>
+ 
+    
+    </main>
+
+    <footer>
+        <p>©️ 2026 Interactive Nature Gallery — CSS Grid Practice!</p>
+    </footer>
+
+</body>
+
+</html>
