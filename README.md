@@ -33,6 +33,9 @@ Learn modern layout techniques
 Day 08  
 Learn CSS Grid for more complex layout
 
+Day 09       
+Responsive Nature Gallery using HTML & CSS Grid      
+
 ---
 
 ## Project
