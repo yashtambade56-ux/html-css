@@ -34,7 +34,10 @@ Day 08
 Learn CSS Grid for more complex layout
 
 Day 09       
-Responsive Nature Gallery using HTML & CSS Grid      
+Responsive Nature Gallery using HTML & CSS Grid        
+
+Day 10              
+SVG Practice Tasks – HTML Graphics Lab                 
 
 ---
 
