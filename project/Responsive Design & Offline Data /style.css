@@ -13,7 +13,7 @@ body {
 /* Mobile */
 @media (max-width: 600px) {
     body {
-        background: #e0f7fa;
+        background: #500b1f;
     }
     .box {
         font-size: 14px;
@@ -23,7 +23,7 @@ body {
 /* Tablet */
 @media (min-width: 601px) and (max-width: 900px) {
     body {
-        background: #fff9c4;
+        background: #7da143;
     }
     .box {
         font-size: 18px;
@@ -33,7 +33,7 @@ body {
 /* Desktop */
 @media (min-width: 901px) {
     body {
-        background: #e8f5e9;
+        background: #0084ff;
     }
     .box {
         font-size: 22px;
