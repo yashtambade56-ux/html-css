@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+
+.box {
+    padding: 30px;
+    margin: 20px;
+    background: lightgray;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    body {
+        background: #e0f7fa;
+    }
+    .box {
+        font-size: 14px;
+    }
+}
+
+/* Tablet */
+@media (min-width: 601px) and (max-width: 900px) {
+    body {
+        background: #fff9c4;
+    }
+    .box {
+        font-size: 18px;
+    }
+}
+
+/* Desktop */
+@media (min-width: 901px) {
+    body {
+        background: #e8f5e9;
+    }
+    .box {
+        font-size: 22px;
+    }
+}
+
+.observation {
+    margin-top: 40px;
+    padding: 15px;
+    border: 2px dashed #444;
+}
