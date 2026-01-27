@@ -1,0 +1,62 @@
+<html>
+<head>
+
+    <title>Responsive & Offline Discovery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Responsive & Offline Experiment</h1>
+
+<div class="box">
+    <p>This layout changes with screen size.</p>
+</div>
+
+<form id="userForm">
+    <input type="text" id="name" placeholder="Enter your name">
+    <button type="submit">Save</button>
+</form>
+
+<div class="info">
+    <p id="savedData"></p>
+    <p id="visitInfo"></p>
+</div>
+
+<div class="observation">
+    <h3>Final Observation</h3>
+    <p id="finalText"></p>
+</div>
+
+<script>
+    // Visit counter
+    let visits = localStorage.getItem("visits") || 0;
+    visits++;
+    localStorage.setItem("visits", visits);
+
+    // Last visit time
+    let now = new Date().toLocaleString();
+    localStorage.setItem("lastVisit", now);
+
+    document.getElementById("visitInfo").innerText =
+        "Visits: " + visits + " | Last Visit: " + localStorage.getItem("lastVisit");
+
+    // Form storage
+    document.getElementById("userForm").addEventListener("submit", function(e) {
+        e.preventDefault();
+        localStorage.setItem("username", name.value);
+        showData();
+    });
+
+    function showData() {
+        document.getElementById("savedData").innerText =
+            "Stored Name: " + (localStorage.getItem("username") || "None");
+    }
+
+    showData();
+
+    document.getElementById("finalText").innerText =
+        "Viewport improved readability and localStorage preserved data across sessions.";
+</script>
+
+</body>
+</html>
