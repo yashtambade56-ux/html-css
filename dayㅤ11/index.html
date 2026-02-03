@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>My Location</title>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100;
+      background: #000000;
+      font-family: 'Times New Roman', Times, serif;
+    }
+
+    .box {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    .box1 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    button {
+      padding: 12px 25px;
+      border: none;
+      border-radius: 25px;
+      background: #FFC300;
+      color: #000000;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+      font-family: 'Times New Roman', Times, serif;
+      box-shadow: #ffd500;
+    }
+
+    button:hover {
+      background: #FFD60A;
+      transform: scale(1.05);
+    }
+
+    #loc {
+      margin-top: 20px;
+      padding: 15px;
+      width: 280px;
+      background: #001D3D;
+      color: #ffffff;
+      border-radius: 15px;
+      box-shadow: 0 0 15px #003566;
+
+      opacity: 0;
+      transition: 0.4s;
+    }
+
+    #loc.show {
+      opacity: 1;
+    }
+    
+  </style>
+</head>
+
+<body>
+<div class = "Box1">
+  <div class="box">
+    <button onclick="getLocation()">Show My Location</button>
+    <p id="loc"></p>
+  </div>
+  </div>
+
+  <script>
+    function getLocation() {
+      let p = document.getElementById("loc");
+
+      navigator.geolocation.getCurrentPosition(pos => {
+        p.innerHTML =
+          "Lat: " + pos.coords.latitude +
+          "<br>Lon: " + pos.coords.longitude;
+
+        p.classList.add("show");
+      });
+    }
+  </script>
+
+<svg viewBox="0 0 600 600">
+
+
+  <circle cx="300" cy="300" r="40" fill="#ffc300"/>
+
+  <circle cx="300" cy="300" r="150"
+    fill="none" stroke="#CAD2C5" opacity="0.3"/>
+
+  <g>
+    <animateTransform
+      attributeName="transform"
+      type="rotate"
+      from="0 300 300"
+      to="360 300 300"
+      dur="5s"
+      repeatCount="indefinite"/>
+
+    <circle cx="450" cy="300" r="15" fill="#CAD2C5"/>
+  </g>
+
+
+  <circle cx="50" cy="80" r="2" fill="#CAD2C5" opacity="0.7"/>
+   <circle cx="500" cy="100" r="2" fill="#CAD2C5" opacity="0.6"/> 
+   <circle cx="300" cy="40" r="1.5" fill="#CAD2C5" opacity="0.5"/> 
+   <circle cx="550" cy="300" r="2" fill="#CAD2C5" opacity="0.6"/>
+</svg>
+
+ 
+
+</body>
+</html>
