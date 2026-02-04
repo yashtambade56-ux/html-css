@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Loading screen animetion...☠️</title>
+
+  <style>
+    h2 {
+      margin-top: 30px;
+      color: rgb(0, 0, 0);
+    }
+
+    /* 1. Color Changing Loading Text */
+    .blink {
+      font-size: 25px;
+      font-weight: bold;
+      animation: colorChange 1s infinite alternate;
+    }
+
+    @keyframes colorChange {
+      from { color: red; }
+      to { color: blue; }
+    }
+
+    /* 2. Rotating Circle */
+    .circle {
+      width: 50px;
+      height: 50px;
+      border: 5px solid lightgray;
+      border-top: 5px solid orange;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      100% { transform: rotate(360deg); }
+    }
+
+    /* 3. Bouncing Dots */
+    .dots {
+      display: flex;
+      gap: 8px;
+    }
+
+    .dots div {
+      width: 12px;
+      height: 12px;
+      background: rgb(255, 0, 0);
+      border-radius: 50%;
+      animation: bounce 0.6s infinite alternate;
+    }
+
+    .dots div:nth-child(2) {
+      animation-delay: 0.2s;
+      background: rgb(255, 204, 0);
+    }
+
+    .dots div:nth-child(3) {
+      animation-delay: 0.4s;
+      background: rgb(32, 239, 0);
+    }
+
+    @keyframes bounce {
+      to { transform: translateY(-15px); }
+    }
+
+    /* 4. Floating Logo */
+    .logo {
+      font-size: 40px;
+      color: crimson;
+      animation: float 1.5s infinite;
+    }
+
+    @keyframes float {
+      50% { transform: translateY(-15px); }
+    }
+
+    /* 5. Sliding Progress Bar */
+    .progress-box {
+      width: 250px;
+      height: 10px;
+      border: 2px solid green;
+      overflow: hidden;
+    }
+
+    .progress {
+      width: 40%;
+      height: 100%;
+      background: limegreen;
+      animation: slide 1s infinite linear;
+    }
+
+    @keyframes slide {
+      from { transform: translateX(-100%); }
+      to { transform: translateX(300%); }
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2>1. Color Changing Loading Text</h2>
+  <div class="blink">Loading...</div>
+
+  <h2>2. Rotating Circle Loader</h2>
+  <div class="circle"></div>
+
+  <h2>3. Bouncing Dots Loader</h2>
+  <div class="dots">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <h2>4. Floating Logo</h2>
+  <div class="logo">☠️</div>
+
+  <h2>5. Sliding Progress Bar</h2>
+  <div class="progress-box">
+    <div class="progress"></div>
+  </div>
+
+</body>
+</html>
