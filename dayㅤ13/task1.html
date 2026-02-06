@@ -1,0 +1,38 @@
+<!-- Task 1: Global Text Color
+Objective: Understand how a variable defined in :root affects text color. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    :root {
+      --primary-color: blue;
+      --secondary-color: green;
+      --text-color: black;
+    }
+
+    h2 {
+      color: var(--primary-color);
+    }
+
+    p {
+      color: var(--text-color);
+    }
+
+    button {
+      background-color: var(--secondary-color);
+      color: white;
+    }
+  </style>
+</head>
+<body>
+    <p>Task 1: Global Text Color
+Objective: Understand how a variable defined in :root affects text color.</p>
+
+<hr>
+  <h2>Heading!!!</h2>
+  <p>This is a paragraph</p>
+  <button>Click</button>
+
+</body>
+</html>

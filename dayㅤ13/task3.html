@@ -1,0 +1,43 @@
+<!-- Task 3: Background Color Using :root
+Objective: Apply background color globally using CSS variables. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    :root {
+      --bg-color: white;
+      --text-color: black;
+    }
+
+    .dark {
+      --bg-color: black;
+      --text-color: white;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+    }
+  </style>
+</head>
+<body class="dark">
+
+  <p>Theme changes using :root variables</p>
+
+</body>
+
+<p>Task 3: Background Color Using :root
+Objective: Apply background color globally using CSS variables.</p>
+
+<hr>
+<h1>Dark / Light Theme</h1>
+  <button onclick="toggleTheme()">Toggle Theme</button>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle("dark");
+    }
+  </script>
+
+</html>

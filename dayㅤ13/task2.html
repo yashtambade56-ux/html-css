@@ -1,0 +1,41 @@
+<!-- Task 2: Global Font Size
+Objective: Learn how :root controls font size across elements. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    :root {
+      --card-bg: rgb(47, 255, 0);
+      --card-text: black;
+      --card-padding: 15px;
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      color: var(--card-text);
+      padding: var(--card-padding);
+      margin: 10px;
+      width: 200px;
+    }
+  </style>
+</head>
+<body>
+
+    <p>Task 2: Global Font Size
+Objective: Learn how :root controls font size across elements.</p>
+
+<hr>
+
+  <div class="card">
+    <h3>Card 1</h3>
+    <p>this is card 1</p>
+  </div>
+
+  <div class="card">
+    <h3>Card 2</h3>
+    <p>this is card 2</p>
+  </div>
+
+</body>
+</html>
