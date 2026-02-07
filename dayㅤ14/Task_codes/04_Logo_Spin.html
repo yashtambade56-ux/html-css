@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Logo Spin</title>
+
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    background: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scene {
+    perspective: 800px;
+}
+
+.logo {
+    font-size: 60px;
+    font-weight: bold;
+    color: #ffffff;
+    transform-style: preserve-3d;
+    animation: spin 3s linear infinite;
+}
+
+/* Animation */
+@keyframes spin {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="scene">
+    <div class="logo">LOGO</div>
+</div>
+
+</body>
+</html>

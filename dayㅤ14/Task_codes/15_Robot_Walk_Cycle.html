@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>15_Robot_Walk_Cycle</title>
+<style>
+body{
+  margin:0;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:#000000;
+}
+
+.robot{
+  position:relative;
+  width:80px;
+  height:200px;
+}
+
+.head{
+  width:40px;
+  height:40px;
+  background:#6b6b6b;
+  margin:auto;
+  border-radius:6px;
+}
+
+.body{
+  width:60px;
+  height:80px;
+  background:#424242;
+  margin:auto;
+  position:relative;
+  top:0;
+}
+
+.arm{
+  width:12px;
+  height:60px;
+  background:#94a3b8;
+  position:absolute;
+  top:20px;
+  transform-origin:top;
+  animation:armSwing 0.8s infinite alternate;
+}
+
+.arm.left{ left:-12px; }
+.arm.right{ right:-12px; animation-delay:.4s; }
+
+.leg{
+  width:16px;
+  height:70px;
+  background:#64748b;
+  position:absolute;
+  top:119px;
+  transform-origin:top;
+  animation:walk 0.8s infinite alternate;
+}
+
+.leg.left{ left:10px; }
+.leg.right{ right:10px; animation-delay:.4s; }
+
+@keyframes armSwing{
+  from{ transform:rotate(30deg); }
+  to{ transform:rotate(-30deg); }
+}
+
+@keyframes walk{
+  from{ transform:rotate(25deg); }
+  to{ transform:rotate(-25deg); }
+}
+</style>
+</head>
+
+<body>
+
+<div class="robot">
+  <div class="head"></div>
+  <div class="body">
+    <div class="arm left"></div>
+    <div class="arm right"></div>
+  </div>
+  <div class="leg left"></div>
+  <div class="leg right"></div>
+</div>
+
+</body>
+</html>

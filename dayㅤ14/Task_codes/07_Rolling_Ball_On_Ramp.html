@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Rolling Ball on Ramp</title>
+
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    background: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scene {
+    position: relative;
+    width: 500px;
+    height: 300px;
+}
+
+.ramp {
+    position: absolute;
+    width: 400px;
+    height: 10px;
+    background: #ffffff;
+    transform: rotate(20deg);
+    top: 200px;
+    left: 50px;
+}
+
+.ball {
+    width: 50px;
+    height: 50px;
+    background: rgb(255, 0, 0);
+    border-radius: 50%;
+    position: absolute;
+    top: 90px;
+    left: 70px;
+    animation: roll 3s linear infinite;
+}
+
+@keyframes roll {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    100% {
+        transform: translate(300px, 110px);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="scene">
+    <div class="ramp"></div>
+    <div class="ball"></div>
+</div>
+
+</body>
+</html>

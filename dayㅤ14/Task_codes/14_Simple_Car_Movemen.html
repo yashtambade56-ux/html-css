@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>14_Simple_Car_Movement</title>
+
+<style>
+body{
+  margin:0;
+  height:100vh;
+  background:#000000;
+  overflow:hidden;
+}
+
+.car{
+  position:absolute;
+  top:50%;
+  left:-220px;
+  transform:translateY(-50%);
+  animation:drive 5s linear infinite;
+}
+
+.top{
+  width:80px;
+  height:30px;
+  background:#ff0000;
+  margin-left:30px;
+}
+
+.body{
+  width:140px;
+  height:40px;
+  background:#7e0000;
+  position:relative;
+}
+
+.wheel{
+  width:24px;
+  height:24px;
+  background:#313131;
+  border-radius:50%;
+  position:absolute;
+  bottom:-12px;
+}
+
+.wheel.left{ left:15px; }
+.wheel.right{ right:15px; }
+
+@keyframes drive{
+  to{
+    left:100%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="car">
+  <div class="top"></div>
+  <div class="body">
+    <div class="wheel left"></div>
+    <div class="wheel right"></div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Mini Solar System</title>
+
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    background: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.system {
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+
+.sun {
+    width: 60px;
+    height: 60px;
+    background: rgb(255, 94, 0);
+    border-radius: 50%;
+    position: absolute;
+    top: 120px;
+    left: 120px;
+}
+
+.orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 1px dashed #5a5a5a;
+    border-radius: 50%;
+    transform-style: preserve-3d;
+}
+
+.planet {
+    width: 20px;
+    height: 20px;
+    background: #00eaff;
+    border-radius: 50%;
+    position: absolute;
+    top: -10px;
+    left: 50%;
+}
+
+.orbit1 {
+    width: 160px;
+    height: 160px;
+    margin-left: -80px;
+    margin-top: -80px;
+    animation: rotate 6s linear infinite;
+}
+
+.orbit2 {
+    width: 240px;
+    height: 240px;
+    margin-left: -120px;
+    margin-top: -120px;
+    animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="system">
+    <div class="sun"></div>
+
+    <div class="orbit orbit1">
+        <div class="planet"></div>
+    </div>
+
+    <div class="orbit orbit2">
+        <div class="planet"></div>
+    </div>
+</div>
+
+</body>
+</html>
