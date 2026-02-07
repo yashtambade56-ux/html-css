@@ -8,116 +8,101 @@ Each animation demonstrates core 3D animation principles like **timing, rotation
 ## 1. Bouncing Ball
 **Description:** A ball bouncing with gravity and squash/stretch effect.  
 **Video Preview:**  
-https://github.com/user-attachments/assets/63aa1568-bb73-4a4f-92fe-537cf69cf4d9
+
+
 ---
 
 ## 2. Rotating 3D Cube
 **Description:** A cube rotating smoothly on X, Y, Z axes using 3D transform.  
 **Video Preview:**  
-![Rotating Cube](videos/02_Rotating_3D_Cube.mp4)
+
 
 ---
 
 ## 3. Pendulum Motion
 **Description:** A swinging pendulum showing natural timing and easing.  
 **Video Preview:**  
-![Pendulum Motion](videos/03_Pendulum_Motion.mp4)
+
 
 ---
 
 ## 4. Logo Spin
 **Description:** 3D logo or text spinning 360° to demonstrate rotation animation.  
 **Video Preview:**  
-![Logo Spin](videos/04_Logo_Spin.mp4)
+
 
 ---
 
 ## 5. Camera Fly-Through
 **Description:** Camera moving through simple 3D objects to show depth & perspective.  
 **Video Preview:**  
-![Camera Fly-Through](videos/05_Camera_Fly_Through.mp4)
+
 
 ---
 
 ## 6. Opening Door
 **Description:** Door opening and closing with proper pivot animation.  
 **Video Preview:**  
-![Opening Door](videos/06_Opening_Door.mp4)
+
 
 ---
 
 ## 7. Rolling Ball on Ramp
 **Description:** Ball rolling down a slope using rotation + translation.  
 **Video Preview:**  
-![Rolling Ball on Ramp](videos/07_Rolling_Ball_on_Ramp.mp4)
+
 
 ---
 
 ## 8. Text Pop-Up
 **Description:** 3D text appearing using scale and fade effects.  
 **Video Preview:**  
-![Text Pop-Up](videos/08_Text_Pop_Up.mp4)
+
 
 ---
 
 ## 9. Mini Solar System
 **Description:** 2–3 planets orbiting around the sun using circular motion.  
 **Video Preview:**  
-![Mini Solar System](videos/09_Mini_Solar_System.mp4)
+
 
 ---
 
 ## 10. Jumping Cube
 **Description:** Cube jumping with proper timing and spacing.  
 **Video Preview:**  
-![Jumping Cube](videos/10_Jumping_Cube.mp4)
+
 
 ---
 
 ## 11. Bouncing Ball in Box
 **Description:** Ball bouncing inside a closed box with collisions.  
 **Video Preview:**  
-![Bouncing Ball in Box](videos/11_Bouncing_Ball_in_Box.mp4)
+
 
 ---
 
 ## 12. Domino Effect
 **Description:** Falling domino blocks in sequence with chain reaction.  
 **Video Preview:**  
-![Domino Effect](videos/12_Domino_Effect.mp4)
+
 
 ---
 
 ## 13. 3D Name Animation
 **Description:** Creative animation of my name with 3D transforms.  
 **Video Preview:**  
-![3D Name Animation](videos/13_3D_Name_Animation.mp4)
+
 
 ---
 
 ## 14. Simple Car Movement
 **Description:** Car moving forward on a road with wheels and motion.  
 **Video Preview:**  
-![Simple Car Movement](videos/14_Simple_Car_Movement.mp4)
+
 
 ---
 
 ## 15. Robot Walk Cycle
 **Description:** Simple humanoid robot walking using CSS keyframes.  
 **Video Preview:**  
-![Robot Walk Cycle](videos/15_Robot_Walk_Cycle.mp4)
-
----
-
-## 🔹 Notes
-- All animations are **pure HTML & CSS**.  
-- Videos are **exported from browser recording** (mp4).  
-- Folder names match video names for clarity.  
-- This demonstrates **timing, motion, rotation, and 3D perspective**.
-
----
-
-You can also add a **GIF instead of mp4** for smaller repo size:
-
-```markdown
-![Bouncing Ball](gifs/01_Bouncing_Ball.gif)
