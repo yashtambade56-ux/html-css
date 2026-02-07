@@ -5,31 +5,10 @@ Each animation demonstrates core 3D animation principles like **timing, rotation
 
 ---
 
-## Table of Contents
-
-1. [Bouncing Ball](#1-bouncing-ball)  
-2. [Rotating 3D Cube](#2-rotating-3d-cube)  
-3. [Pendulum Motion](#3-pendulum-motion)  
-4. [Logo Spin](#4-logo-spin)  
-5. [Camera Fly-Through](#5-camera-fly-through)  
-6. [Opening Door](#6-opening-door)  
-7. [Rolling Ball on Ramp](#7-rolling-ball-on-ramp)  
-8. [Text Pop-Up](#8-text-pop-up)  
-9. [Mini Solar System](#9-mini-solar-system)  
-10. [Jumping Cube](#10-jumping-cube)  
-11. [Bouncing Ball in Box](#11-bouncing-ball-in-box)  
-12. [Domino Effect](#12-domino-effect)  
-13. [3D Name Animation](#13-3d-name-animation)  
-14. [Simple Car Movement](#14-simple-car-movement)  
-15. [Robot Walk Cycle](#15-robot-walk-cycle)
-
----
-
 ## 1. Bouncing Ball
 **Description:** A ball bouncing with gravity and squash/stretch effect.  
 **Video Preview:**  
-![Bouncing Ball]([videos/01_Bouncing_Ball.mp4](https://github.com/yashtambade56-ux/html-css/issues/1#issue-3909967303))
-
+https://github.com/user-attachments/assets/8b57161f-39df-4181-bdc3-1e49ec65366c
 ---
 
 ## 2. Rotating 3D Cube
