@@ -8,7 +8,7 @@ Each animation demonstrates core 3D animation principles like **timing, rotation
 ## 1. Bouncing Ball
 **Description:** A ball bouncing with gravity and squash/stretch effect.  
 **Video Preview:**  
-https://github.com/user-attachments/assets/8b57161f-39df-4181-bdc3-1e49ec65366c
+https://github.com/yashtambade56-ux/html-css/issues/1#issue-3909967303
 ---
 
 ## 2. Rotating 3D Cube
