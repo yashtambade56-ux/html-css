@@ -37,7 +37,19 @@ Day 09
 Responsive Nature Gallery using HTML & CSS Grid        
 
 Day 10              
-SVG Practice Tasks – HTML Graphics Lab                 
+SVG Practice Tasks – HTML Graphics Lab   
+
+Day 11                      
+Location Finder – JavaScript Geolocation & SVG Animation                        
+
+Day 12                 
+CSS Loading Animations & Moving Stars Effect                          
+
+Day 13    
+CSS :root Variables – Global Styling & Theming          
+
+Day 14                
+CSS 3D Animations – 15 Practical Animation Tasks                   
 
 ---
 
