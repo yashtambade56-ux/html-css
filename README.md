@@ -42,10 +42,12 @@ SVG Practice Tasks – HTML Graphics Lab
 ---
 
 ## Project
+                                  
+1. Makar Sankranti Website – info/celebration website                 
+2. Photography Application – showcase photos or portfolio                      
+3. Travel Destinations Explorer – interactive travel gallery website                           
+4. Responsive & Offline Discovery – responsive website using media queries and localStorage                            
 
-1. Makar Sankranti Website – info/celebration website
-2. Photography Application – showcase photos or portfolio
-3. Travel Destinations Explorer – interactive travel gallery website
 
 ---
 
