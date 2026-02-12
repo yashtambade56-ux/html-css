@@ -1,64 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FlexDash</title>
+    <title>Dashboard</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<div class="app">
-
-    <div class="sidebar">
-        <h3>FlexDash</h3>
-        <a href="#">Dashboard</a>
-        <a href="#">Analytics</a>
-        <a href="#">Users</a>
-        <a href="#">Reports</a>
-        <a href="#">Settings</a>
-    </div>
-
-    <div class="main">
-
-        <div class="topbar">
+    <nav class="navbar">
+        <div class="logo">FlexDash</div>
+        <div class="search-box">
             <input type="text" placeholder="Search dashboard...">
-        
-            <div class="admin"> 👤 Admin</div>
         </div>
+        <div class="profile">
+            <span>👤 Admin</span>
+        </div>
+    </nav>
 
-        <div class="content">
-            <div class="cards">
+    <div class="container">
+        <aside class="sidebar">
+            <ul>
+                <li><a href="#" class="active">Dashboard</a></li>
+                <li><a href="#">Analytics</a></li>
+                <li><a href="#">Users</a></li>
+                <li><a href="#">Reports</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </aside>
+
+        <main class="content">
+            <div class="row">
                 <div class="card">
-                    <p>Users</p>
-                    <h3>1,240</h3>
+                    <h3>Users</h3>
+                    <p>1,240</p>
                 </div>
                 <div class="card">
-                    <p>Revenue</p>
-                    <h3>₹2.4L</h3>
+                    <h3>Revenue</h3>
+                    <p>₹2.4L</p>
                 </div>
                 <div class="card">
-                    <p>Orders</p>
-                    <h3>320</h3>
+                    <h3>Orders</h3>
+                    <p>320</p>
                 </div>
             </div>
 
-            <div class="cards">
-                <div class="wide">
-                    <p>Growth</p>
-                    <h3>+18%</h3>
+            <div class="row">
+                <div class="card blue">
+                    <h3>Growth</h3>
+                    <p>+18%</p>
                 </div>
-                <div class="wide">
-                    <p>Conversion</p>
-                    <h3>5.4%</h3>
+                <div class="card blue">
+                    <h3>Conversion</h3>
+                    <p>5.4%</p>
                 </div>
             </div>
-
-        </div>
-
+        </main>
     </div>
-
-</div>
 
 </body>
+
 </html>
