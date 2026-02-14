@@ -49,7 +49,15 @@ Day 13
 CSS :root Variables – Global Styling & Theming          
 
 Day 14                
-CSS 3D Animations – 15 Practical Animation Tasks                   
+CSS 3D Animations – 15 Practical Animation Tasks 
+
+Day 15                
+Dashboard UI – Responsive HTML & CSS Layout                     
+
+Day 16            
+Frontend & Creative Projects - 20 task
+live priview - 
+https://yashhh710.github.io/20-tasks/
 
 ---
 
