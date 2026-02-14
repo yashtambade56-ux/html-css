@@ -50,7 +50,7 @@ CSS :root Variables – Global Styling & Theming
 
 Day 14                
 CSS 3D Animations – 15 Practical Animation Tasks 
-live Demo -
+live Demo -                             
 https://yashhh710.github.io/SVG-Animation-Gallery/
 
 Day 15                
@@ -58,7 +58,7 @@ Dashboard UI – Responsive HTML & CSS Layout
 
 Day 16                
 Frontend & Creative Projects - 20 task                  
-live Demo -                
+live Demo -                                   
 https://yashhh710.github.io/20-tasks/               
 
 ---
