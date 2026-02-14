@@ -9,10 +9,13 @@ Each project demonstrates modern **UI/UX techniques, animations, responsive layo
 **Description:** Interactive profile card with hover effects and social icons.  
 **Video Preview:**  
 
+
 ---
 
 ## 2️ Responsive Navigation  
 **Description:** Navigation bar with hover underline and mobile-friendly stacking.  
+**Video Preview:**  
+
 
 ---
 
