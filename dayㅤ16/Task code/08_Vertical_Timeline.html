@@ -1,0 +1,130 @@
+<!-- 8 - Vertical Timeline - Flexbox - Pulse effect - Responsive alignment -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Vertical Timeline</title>
+
+<style>
+
+body{
+    margin:0;
+    background:#000000;
+    color:white;
+    font-family:Arial;
+}
+
+.timeline{
+    position:relative;
+    width:600px;
+    margin:80px auto;
+}
+
+.timeline::before{
+    content:"";
+    position:absolute;
+    left:50%;
+    top:0;
+    bottom:0;
+    width:4px;
+    background:white;
+    transform:translateX(-50%);
+}
+
+.row{
+    position:relative;
+    display:flex;
+    align-items:center;
+    margin:50px 0;
+}
+
+.left, .right{
+    width:50%;
+    display:flex;
+}
+
+.left{
+    justify-content:flex-end;
+    padding-right:30px;
+}
+
+.right{
+    justify-content:flex-start;
+    padding-left:30px;
+}
+
+.box{
+    background:#202020;
+    padding:12px 18px;
+    border-radius:8px;
+}
+
+.dot{
+    position:absolute;
+    left:50%;
+    width:16px;
+    height:16px;
+    background:#89f767;
+    border-radius:50%;
+    transform:translateX(-50%);
+}
+
+.dot::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    border-radius:50%;
+    background:#00ff0d;
+    animation:pulse 1.5s infinite;
+    z-index:-1;
+}
+
+@keyframes pulse{
+    0%{
+        transform:scale(1);
+        opacity:0.7;
+    }
+    70%{
+        transform:scale(2.5);
+        opacity:0;
+    }
+    100%{
+        opacity:0;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="timeline">
+
+    <div class="row">
+        <div class="left"><div class="box">Wake up🌄</div></div>
+        <div class="dot"></div>
+        <div class="right"></div>
+    </div>
+
+    <div class="row">
+        <div class="left"></div>
+        <div class="dot"></div>
+        <div class="right"><div class="box">Eat🍎</div></div>
+    </div>
+
+    <div class="row">
+        <div class="left"><div class="box">Sleep🌉</div></div>
+        <div class="dot"></div>
+        <div class="right"></div>
+    </div>
+
+    <div class="row">
+        <div class="left"></div>
+        <div class="dot"></div>
+        <div class="right"><div class="box">Repeat🔁</div></div>
+    </div>
+
+</div>
+
+</body>
+</html>

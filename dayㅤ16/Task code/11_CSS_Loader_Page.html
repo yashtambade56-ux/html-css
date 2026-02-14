@@ -1,0 +1,42 @@
+<!-- 11 - CSS Loader Page - Flexbox - Rotation animation - Center content vertically -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Loader</title>
+
+<style>
+
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#000000;
+}
+
+.loader{
+    width:60px;
+    height:60px;
+    border:6px solid #333333;
+    border-top:6px solid white;
+    border-radius:50%;
+    animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+    100%{
+        transform:rotate(360deg);
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="loader"></div>
+
+</body>
+</html>

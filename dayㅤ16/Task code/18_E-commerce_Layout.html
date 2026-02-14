@@ -1,0 +1,207 @@
+<!-- 18 - E-commerce Layout - Grid - Add-to-cart hover animation - Sidebar + product grid -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>E-commerce Layout</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+.navbar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    background:#131921;
+    padding:12px 20px;
+    color:white;
+}
+
+.logo{
+    font-size:22px;
+    font-weight:bold;
+}
+
+.search-box{
+    flex:1;
+    display:flex;
+    margin:0 20px;
+}
+
+.search-box input{
+    width:100%;
+    padding:10px;
+    border:none;
+    outline:none;
+    border-radius:8px 0 0 8px;
+}
+
+.search-box button{
+    padding:10px 18px;
+    border:none;
+    background:#febd69;
+    cursor:pointer;
+    border-radius:0 8px 8px 0;
+}
+
+.cart{
+    font-size:20px;
+    cursor:pointer;
+}
+
+.container{
+    display:grid;
+    grid-template-columns:220px 1fr;
+    min-height:calc(100vh - 60px);
+}
+
+.sidebar{
+    background:#f3f3f3;
+    padding:20px;
+}
+
+.sidebar h3{
+    margin-bottom:12px;
+}
+
+.sidebar ul{
+    list-style:none;
+}
+
+.sidebar li{
+    padding:8px 0;
+    cursor:pointer;
+}
+
+.sidebar li:hover{
+    color:#ff9900;
+}
+
+.products{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+    gap:20px;
+    padding:20px;
+}
+
+.card{
+    background:white;
+    border-radius:12px;
+    padding:15px;
+    text-align:center;
+    box-shadow:0 0 10px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card img{
+    width:100%;
+    border-radius:10px;
+}
+
+.card h4{
+    margin:10px 0;
+}
+
+.card button{
+    background:#ff9900;
+    border:none;
+    padding:10px 15px;
+    border-radius:25px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.card button:hover{
+    background:#e68900;
+    transform:scale(1.05);
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="navbar">
+    <div class="logo">AmaZing</div>
+
+    <div class="search-box">
+        <input type="text" placeholder="Search products...">
+        <button>Search</button>
+    </div>
+
+    <div class="cart">🛒 Cart</div>
+</div>
+
+<div class="container">
+
+    <div class="sidebar">
+        <h3>Categories</h3>
+        <ul>
+            <li>Electronics</li>
+            <li>Fashion</li>
+            <li>Mobiles</li>
+            <li>Home Decor</li>
+            <li>Gaming</li>
+        </ul>
+    </div>
+
+    <div class="products">
+
+        <div class="card">
+            <img src="https://m.media-amazon.com/images/I/81nPkLHN3vL._SX679_.jpg">
+            <h4>ASUS TUF A15</h4>
+            <p>₹71,990</p>
+            <button>Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="https://m.media-amazon.com/images/I/71eWwwQOIQL._SX679_.jpg">
+            <h4>Ant Esports MK1300 V2</h4>
+            <p>₹1,349</p>
+            <button>Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="https://m.media-amazon.com/images/I/41hYQ9J7gCL._SY300_SX300_QL70_FMwebp_.jpg">
+            <h4>Logitech G102</h4>
+            <p>₹1,349</p>
+            <button>Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="https://m.media-amazon.com/images/I/71uvi-x5A8L._SX522_.jpg">
+            <h4>Product Three</h4>
+            <p>₹4,099</p>
+            <button>Add to Cart</button>
+        </div>
+
+         <div class="card">
+            <img src="https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/j/n/8/z7-5g-i2207-iqoo-original-imagz5yxghygfxwz.jpeg?q=70">
+            <h4>iQoo Z7s 5g</h4>
+            <p>₹23,999</p>
+            <button>Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="https://m.media-amazon.com/images/I/416e1B8V75L._SY300_SX300_QL70_FMwebp_.jpg">
+            <h4>Apple 2025 MacBook Air</h4>
+            <p>₹89,990</p>
+            <button>Add to Cart</button>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

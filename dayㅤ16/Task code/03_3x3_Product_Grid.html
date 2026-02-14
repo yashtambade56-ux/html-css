@@ -1,0 +1,116 @@
+<!-- 3 - 3x3 Product Grid - CSS Grid - Image zoom on hover - Use repeat() function -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>3x3 Product Grid</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial;
+    background:#000000;
+    color:white;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:20px;
+    padding:40px;
+    max-width:900px;
+    margin:auto;
+}
+
+.card{
+    background: #111111;
+    border-radius:10px;
+    overflow:hidden;
+    text-align:center;
+    padding-bottom:15px;
+}
+
+.card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    transition:0.3s;
+}
+
+.card:hover img{
+    transform:scale(1.1);
+}
+
+.card h3{
+    margin:10px 0 5px;
+}
+
+@media(max-width:700px){
+    .grid{
+        grid-template-columns:repeat(2, 1fr);
+    }
+}
+
+@media(max-width:450px){
+    .grid{
+        grid-template-columns:repeat(1, 1fr);
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="grid">
+
+    <div class="card">
+        <img src="https://images.alphacoders.com/605/thumbbig-605592.webp">
+        <h3>Wallpaper 1</h3>
+    </div>
+
+    <div class="card">
+        <img src="https://images6.alphacoders.com/134/thumbbig-1345576.webp">
+        <h3>Wallpaper 2</h3>
+    </div>
+
+    <div class="card">
+        <img src="https://images3.alphacoders.com/132/thumbbig-1323165.webp">
+        <h3>Wallpaper 3</h3>
+    </div>
+
+    <div class="card">
+        <img src="https://images4.alphacoders.com/641/thumbbig-641968.webp">
+        <h3>Wallpaper 4</h3>
+    </div>
+
+    <div class="card">
+        <img src="https://images3.alphacoders.com/132/thumbbig-1328396.webp">
+        <h3>Wallpaper 5</h3>
+    </div>
+
+    <div class="card">
+        <img src="https://images3.alphacoders.com/144/thumbbig-144565.webp">
+        <h3>Wallpaper 6</h3>
+    </div>
+
+    <div class="card">
+        <img src="https://images3.alphacoders.com/614/thumbbig-614743.webp">
+        <h3>Wallpaper 7</h3>
+    </div>
+
+    <div class="card">
+        <img src="https://images5.alphacoders.com/532/thumbbig-532559.webp">
+        <h3>Wallpaper 8</h3>
+    </div>
+
+    <div class="card">
+        <img src="https://images.alphacoders.com/134/thumbbig-1343746.webp">
+        <h3>Wallpaper 9</h3>
+    </div>
+
+</div>
+
+</body>
+</html>
