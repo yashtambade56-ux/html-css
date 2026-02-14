@@ -42,7 +42,9 @@ Day 10
 SVG Practice Tasks – HTML Graphics Lab   
 
 Day 11                      
-Location Finder – JavaScript Geolocation & SVG Animation                        
+Location Finder – JavaScript Geolocation & SVG Animation   
+live Demo -                
+https://yashhh710.github.io/my-Location/                       
 
 Day 12                 
 CSS Loading Animations & Moving Stars Effect                          
