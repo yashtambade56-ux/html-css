@@ -58,7 +58,7 @@ CSS 3D Animations – 15 Practical Animation Tasks
 1. Makar Sankranti Website – info/celebration website { https://yashhh710.github.io/Makar-Sankranti-Website/ }               
 2. Photography Application – showcase photos or portfolio { https://yashhh710.github.io/Photography-Application/ }                 
 3. Travel Destinations Explorer – interactive travel gallery website { https://yashhh710.github.io/Travel-Destinations-Explorer/ }                     
-4. Responsive & Offline Discovery – responsive website using media queries and localStorage                            
+4. Responsive & Offline Discovery – responsive website using media queries and localStorage { https://yashhh710.github.io/Responsive-Offline-Discovery/ }                 
 
 
 ---
