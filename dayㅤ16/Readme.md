@@ -2,7 +2,9 @@
 
 This repository contains **20 interactive frontend projects** created using **HTML, CSS, and basic JavaScript**.  
 Each project demonstrates modern **UI/UX techniques, animations, responsive layouts, and interactive elements**.  
+---
 
+Live previewv ->  https://yashhh710.github.io/20-tasks/
 ---
 
 ## 1️ Animated Profile Card  
