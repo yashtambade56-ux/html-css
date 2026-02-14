@@ -3,6 +3,8 @@
 This repository contains **15 small 3D animation projects** created using **HTML and CSS only**.  
 Each animation demonstrates core 3D animation principles like **timing, rotation, gravity, and perspective**.
 
+live Demo - https://yashhh710.github.io/SVG-Animation-Gallery/
+
 ---
 
 ## 1. Bouncing Ball
