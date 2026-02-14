@@ -8,7 +8,7 @@ Each project demonstrates modern **UI/UX techniques, animations, responsive layo
 ## 1️ Animated Profile Card  
 **Description:** Interactive profile card with hover effects and social icons.  
 **Video Preview:**  
-
+![Image](https://github.com/user-attachments/assets/0d37c533-e952-4ee3-831f-38fd5d87c15e)
 
 ---
 
