@@ -25,7 +25,9 @@ Day 05
 CSS box model practice (margin, padding, border)
 
 Day 06  
-Built a basic HTML & CSS website
+Built a basic HTML & CSS website                     
+live Demo -                 
+https://yashhh710.github.io/My-Website/index.html                              
 
 Day 07  
 Learn modern layout techniques
