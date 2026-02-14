@@ -1,0 +1,125 @@
+<!-- 5 - Pricing Table - Flexbox - Gradient animation - Highlight middle card -->\
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Pricing Table</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial;
+    background:black;
+    color:white;
+}
+
+.pricing{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    padding:80px 20px;
+    flex-wrap:wrap;
+}
+
+.card{
+    background:#111;
+    padding:30px;
+    width:220px;
+    border-radius:10px;
+    text-align:center;
+}
+
+.card.popular{
+    transform:scale(1.1);
+    background:linear-gradient(270deg,#ff0000,#ff7300,#ffc400);
+    background-size:400% 400%;
+    animation:gradientMove 5s infinite linear;
+    color:black;
+}
+
+@keyframes gradientMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+.price{
+    font-size:28px;
+    margin:15px 0;
+}
+
+button{
+    padding:10px 20px;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    background:#63cccf;
+}
+
+@media(max-width:700px){
+    .pricing{
+        flex-direction:column;
+        align-items:center;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="pricing">
+
+    <div class="card">
+        <h2>Basic</h2>
+        <p class="price">₹99</p>
+        <hr>
+        <p>No adds
+           <br>
+           Stream only 1 device
+           <br>
+           Complete access
+        </p>
+        <button>Buy</button>
+    </div>
+
+    <div class="card popular">
+        <p>Most Popular</p>
+        <h2>Premium</h2>
+        <p class="price">₹1999</p>
+        <hr>
+        <p>
+        No adds
+        <br>
+        Stream 4 device
+        <br>
+        Complete access 
+        <br>
+        Offline Viewing
+        <br>
+        24/7 Support
+        </p>
+        <button>Buy</button>
+    </div>
+
+    <div class="card">
+        <h2>Pro</h2>
+        <p class="price">₹999</p>
+        <hr>
+        <p>
+        No adds
+        <br>
+        Stream 2 device
+        <br>
+        Complete access 
+        <br>
+        Offline Viewing
+        </p>
+        <button>Buy</button>
+    </div>
+
+</div>
+
+</body>
+</html>

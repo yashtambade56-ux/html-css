@@ -1,0 +1,102 @@
+<!-- 12 - Magazine Layout - Grid - Section fade-in - Featured article spanning columns -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Magazine Layout</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial;
+    background:#000000;
+    color:white;
+}
+
+.container{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:20px;
+    padding:30px;
+    max-width:1000px;
+    margin:auto;
+}
+
+.card{
+    background:#212121;
+    padding:20px;
+    border-radius:10px;
+    opacity:0;
+    transform:translateY(30px);
+    animation:fadeIn 0.8s ease forwards;
+}
+
+.featured{
+    grid-column:span 3;
+    background:#121212;
+}
+
+@keyframes fadeIn{
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@media(max-width:700px){
+    .container{
+        grid-template-columns:1fr;
+    }
+
+    .featured{
+        grid-column:span 1;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="card featured">
+        <h2>Why all Gen-z watch anime...</h2>
+        <p>The Rise of Modern Anime: From TV Screens to Global Culture...</p>
+    </div>
+
+    <div class="card">
+        <h3>Action Anime</h3>
+        <p>Why Action Anime Feels So Intense</p>
+    </div>
+
+    <div class="card">
+        <h3>Anime Art Style</h3>
+        <p>The Beauty of Anime Art</p>
+    </div>
+
+    <div class="card">
+        <h3>Anime Characters</h3>
+        <p>Why Anime Characters Feel Real</p>
+    </div>
+
+    <div class="card">
+        <h3>Anime Worldbuilding</h3>
+        <p>Worlds Beyond Imagination</p>
+    </div>
+
+    <div class="card">
+        <h3>Emotional Journeys</h3>
+        <p>Stories That Touch the Soul</p>
+    </div>
+
+    <div class="card">
+        <h3>Rise of the Hero</h3>
+        <p>From Weakness to Strength</p>
+    </div>
+
+</div>
+
+</body>
+</html>

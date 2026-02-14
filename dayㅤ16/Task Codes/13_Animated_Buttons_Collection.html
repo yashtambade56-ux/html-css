@@ -1,0 +1,75 @@
+<!-- 13 - Animated Buttons Collection - Flexbox - Multiple button animations - 5 different styles -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Simple Animated Buttons</title>
+
+<style>
+
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#000000;
+    font-family:Arial;
+}
+
+.buttons{
+    display:flex;
+    gap:15px;
+}
+
+button{
+    padding:12px 22px;
+    border:none;
+    cursor:pointer;
+    color:white;
+    background:#333333;
+    transition:0.3s;
+}
+
+.glow:hover{
+    box-shadow:0 0 10px rgb(255, 255, 255);
+}
+
+.fill{
+    border:2px solid #333333;
+    background:#333333;
+    color:rgb(255, 255, 255);
+}
+
+.fill:hover{
+    background:rgb(255, 0, 0);
+    color:black;
+}
+
+.bounce:hover{
+    transform:translateY(-6px);
+}
+
+.rotate:hover{
+    transform:rotate(5deg);
+}
+
+.pulse:hover{
+    box-shadow:0 0 0 8px rgba(255,255,255,0.2);
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="buttons">
+    <button class="glow">Glow</button>
+    <button class="fill">colour Fill</button>
+    <button class="bounce">Bounce</button>
+    <button class="rotate">Rotate</button>
+    <button class="pulse">Pulse</button>
+</div>
+
+</body>
+</html>

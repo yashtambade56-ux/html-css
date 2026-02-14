@@ -1,0 +1,82 @@
+<!-- 10 - Floating Testimonials - Flexbox - Continuous float - Smooth background change -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Floating Testimonials</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    animation:bgChange 8s infinite alternate;
+}
+
+@keyframes bgChange{
+    0%{ background:#000000; }
+    50%{ background:#8b8b8b; }
+    100%{ background:#f0f0f0; }
+}
+
+.testimonials{
+    display:flex;
+    gap:20px;
+}
+
+.card{
+    width:220px;
+    padding:20px;
+    background:white;
+    border-radius:12px;
+    text-align:center;
+    animation:float 3s ease-in-out infinite;
+}
+
+.card:nth-child(2){ animation-delay:0.5s; }
+.card:nth-child(3){ animation-delay:1s; }
+
+@keyframes float{
+    0%,100%{ transform:translateY(0); }
+    50%{ transform:translateY(-15px); }
+}
+
+.card p{
+    font-size:14px;
+    color:#444;
+}
+
+.card h4{
+    margin-top:10px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="testimonials">
+
+    <div class="card">
+        <p> It tells the story of Naruto Uzumaki, a young, socially isolated ninja...</p>
+        <h4>- Naruto</h4>
+    </div>
+
+    <div class="card">
+        <p>It follows Tanjiro Kamado, who joins the Demon Slayer Corps after his family is slaughtered, and his journey to save his sister, Nezuko</p>
+        <h4>- Demon slayer</h4>
+    </div>
+
+    <div class="card">
+        <p> It follows the adventures of Monkey D. Luffy and his crew...</p>
+        <h4>- One Piece</h4>
+    </div>
+    
+</div>
+
+</body>
+</html>

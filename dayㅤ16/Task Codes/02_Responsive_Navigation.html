@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Simple Navbar</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial;
+    background:rgb(0, 0, 0);
+}
+
+nav{
+    background:rgb(0, 0, 0);
+    padding:15px;
+    text-align:center;
+    border-bottom:2px solid rgb(255, 255, 255);
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:15px;
+    display:inline-block;
+    position:relative;
+}
+
+nav a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-5px;    width:0%;
+    height:2px;
+    background:rgb(255, 255, 255);
+    transition:0.3s;
+}
+
+nav a:hover::after{
+    width:100%;
+}
+
+@media(max-width:600px){
+    nav a{
+        display:block;
+        margin:10px 0;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">info</a>
+    <a href="#">contect</a>
+    <a href="#">Login</a>
+</nav>
+
+</body>
+</html>

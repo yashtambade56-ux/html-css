@@ -1,0 +1,77 @@
+<!-- 15 - Flip Card Animation - Flexbox - 3D flip effect - Front & back design -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Flip Card</title>
+
+<style>
+
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#0f0f0f;
+}
+
+.card{
+    width:220px;
+    height:300px;
+    perspective:1000px;
+}
+
+.inner{
+    width:100%;
+    height:100%;
+    position:relative;
+    transform-style:preserve-3d;
+    transition:0.6s;
+}
+
+.card:hover .inner{
+    transform:rotateY(180deg);
+}
+
+.front, .back{
+    position:absolute;
+    width:100%;
+    height:100%;
+    border-radius:12px;
+    overflow:hidden;
+    backface-visibility:hidden;
+}
+
+.front img,
+.back img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.back{
+    transform:rotateY(180deg);
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <div class="inner">
+
+        <div class="front">
+            <img src="https://dz3we2x72f7ol.cloudfront.net/expansions/phantasmal-flames/en-us/8BXG_EN_11-2x.png">
+        </div>
+
+        <div class="back">
+            <img src="https://dz3we2x72f7ol.cloudfront.net/expansions/phantasmal-flames/en-us/8BXG_EN_13-2x.png">
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

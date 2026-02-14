@@ -1,0 +1,76 @@
+<!-- 6 - Asymmetrical Gallery - CSS Grid - Grayscale to color - Use row/column span -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Asymmetrical Gallery</title>
+
+<style>
+
+body{
+    margin:0;
+    background:black;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    grid-auto-rows:150px;
+    grid-auto-flow:dense;
+    gap: 8px;
+    padding:12px;
+}
+
+.gallery img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    filter:grayscale(100%);
+    transition:0.4s;
+}
+
+.gallery img:hover{
+    filter:grayscale(0);
+}
+
+.big{
+    grid-column:span 2;
+    grid-row:span 2;
+}
+
+.wide{
+    grid-column:span 2;
+}
+
+.tall{
+    grid-row:span 2;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="gallery">
+    <img class="big" src="https://goodwallpapers.com/files/preview/1280x853/166017555345930tglwgmf4oya383krngut7axac7rjlw3eky8qxgzidwexff17goasv5vscsievdjqrjybbg1exxpsdumfdeylvyyrxavqrfhqo8i.jpg">
+
+    <img class="wide" src="https://www.pngitem.com/pimgs/m/622-6228786_one-piece-anime-banner-hd-png-download.png">
+
+    <img class="tall" src="https://wallpapercg.com/media/ts_2x/15645.webp">
+
+    <img src="https://wallpapercg.com/media/ts_2x/20297.webp">
+
+    <img src="https://wallpapercg.com/media/ts_2x/10907.webp">
+    
+    <img class="wide" src="https://th.bing.com/th/id/OIP.D9FCnjmlgTXVDEMNzUWMPgHaEK?w=328&h=185&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3">
+
+    <img class="tall" src="https://th.bing.com/th/id/OIP.tqPQA24AiLcgrS1PeJoRFQHaFS?w=251&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3">
+    
+    <img src="https://wallpapercg.com/media/ts_2x/10903.webp">
+
+    <img src="https://wallpapercg.com/media/ts_2x/33103.webp">
+</div>
+
+</body>
+</html>

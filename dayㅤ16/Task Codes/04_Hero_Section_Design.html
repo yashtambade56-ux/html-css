@@ -1,0 +1,95 @@
+<!-- 4 - Hero Section Design - Flexbox - Slide-in + Pulse button - Left text, right image layout -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hero Section</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial;
+    background:black;
+    color:white;
+}
+
+.hero{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:60px 10%;
+    min-height:100vh;
+}
+
+.text{
+    max-width:500px;
+    animation:slideLeft 1s ease;
+}
+
+.image img{
+    width:350px;
+    border-radius:10px;
+    animation:slideRight 1s ease;
+}
+
+button{
+    margin-top:20px;
+    padding:12px 25px;
+    border:none;
+    background:#ff4800;
+    font-size:16px;
+    border-radius:6px;
+    cursor:pointer;
+    animation:pulse 1.5s infinite;
+}
+
+@keyframes slideLeft{
+    from{transform:translateX(-80px); opacity:0;}
+    to{transform:translateX(0); opacity:1;}
+}
+
+@keyframes slideRight{
+    from{transform:translateX(80px); opacity:0;}
+    to{transform:translateX(0); opacity:1;}
+}
+
+@keyframes pulse{
+    0%{transform:scale(1);}
+    50%{transform:scale(1.08);}
+    100%{transform:scale(1);}
+}
+
+@media(max-width:800px){
+    .hero{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .image img{
+        margin-top:30px;
+        width:250px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+
+    <div class="text">
+        <h1>Welcome to Anime world...</h1>
+        <p>Demon Slayer: Kimetsu no Yaiba</p>
+        <button>Watch Now</button>
+    </div>
+
+    <div class="image">
+        <img src="https://mfiles.alphacoders.com/100/thumb-350-1008214.png">
+    </div>
+
+</div>
+
+</body>
+</html>
