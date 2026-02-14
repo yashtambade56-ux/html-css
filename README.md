@@ -54,10 +54,10 @@ CSS 3D Animations – 15 Practical Animation Tasks
 Day 15                
 Dashboard UI – Responsive HTML & CSS Layout                     
 
-Day 16            
-Frontend & Creative Projects - 20 task
-live priview - 
-https://yashhh710.github.io/20-tasks/
+Day 16                
+Frontend & Creative Projects - 20 task                  
+live Demo -                
+https://yashhh710.github.io/20-tasks/               
 
 ---
 
