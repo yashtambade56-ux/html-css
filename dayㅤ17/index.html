@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Hidden Power Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+            background-color: #ffffff;
+            color: #000000;
+        }
+        h1, h2 {
+            color: #2c3e50;
+            text-align: center;
+        }
+        .div1, .div2, .div3, .div4, .div5 {
+            text-align: center;
+            padding: 20px;
+            margin: 20px 0;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        details {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        progress, meter {
+            width: 100%;
+            height: 25px;
+            margin-bottom: 20px;
+        }
+        mark {
+            background-color: rgb(255, 255, 0);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Explore Hidden HTML5 Tags</h1>
+
+    <!-- 1. details & summary tag -->
+    <div class="div1">
+        <h2>1. Collapsible FAQ Section</h2>
+        <details>
+            <summary>What is HTML5?</summary>
+            <p>HTML5 is the latest version of HTML that adds new semantic tags and interactive features for modern web pages.</p>
+        </details>
+    </div>
+
+    <!-- 2. mark tag -->
+    <div class="div2">
+        <h2>2. Highlight Important Text</h2>
+        <p>When searching for terms, <mark>HTML5 semantic tags</mark> help developers structure content better.</p>
+    </div>
+
+    <!-- 3. progress tag -->
+    <div class="div3">
+        <h2>3. File Upload Progress</h2>
+        <p>Upload Progress:</p>
+        <progress value="95" max="100"></progress>
+
+    <!-- 4. meter tag -->
+    <div class="div4">
+        <h2>4. Battery Level Example</h2>
+        <p>Battery Level:</p>
+        <meter value="0.3" min="0" max="1">30%</meter>
+    </div>
+
+    <!-- 5. time tag -->
+    <div class="div5">
+    <h2>5. Date Example</h2>
+    <p>Published on <time datetime="2026-02-16">February 16, 2026</time></p>
+    <p>Event starts at <time datetime="2026-02-16T14:00">2:00 PM, Feb 16</time></p>
+</div>
+
+</body>
+</html>
