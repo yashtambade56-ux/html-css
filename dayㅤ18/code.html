@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CSS Post 2025 Examples</title>
+
+<style>
+body{
+  font-family: Arial;
+  margin:40px;
+}
+
+section{
+  margin-bottom:60px;
+  padding:20px;
+  border:1px solid #ddd;
+}
+
+/* 1 animation-timeline */
+.scroll-box{
+  height:200vh;
+}
+.fade{
+  width:120px;
+  height:120px;
+  background:red;
+  animation:fade 1s linear;
+  animation-timeline: scroll();
+}
+@keyframes fade{
+  from{opacity:0}
+  to{opacity:1}
+}
+
+/* 2 text-box-trim */
+.trim{
+  text-box-trim: both;
+}
+
+/* 3 text-box-align */
+.align{
+  text-align:center;
+}
+
+/* 4 text-box */
+.textbox{
+  text-box: trim-both;
+}
+
+/* 5 anchor-name */
+.anchor-btn{
+  anchor-name: --btn;
+}
+
+/* 6 position-anchor */
+.tooltip{
+  position-anchor: --btn;
+  position: absolute;
+  background: #333;
+  color: #fff;
+}
+
+/* 7 anchor() */
+.tooltip{
+  top: anchor(bottom);
+}
+
+/* 8 scrollbar-gutter */
+.scroll-area{
+  height:100px;
+  overflow:auto;
+  scrollbar-gutter: stable;
+}
+
+/* 9 target text */
+::target-text{
+  background:yellow;
+}
+
+/* 10 light-dark */
+.theme{
+  /* Requires color-scheme to be set to work */
+  color-scheme: light dark;
+  border: 1px solid #ccc;
+  color: light-dark(black, white);
+  background: light-dark(white, black);
+  padding:10px;
+}
+
+/* 11 relative color */
+.rel{
+  background:hsl(from blue h s 40%);
+  color:white;
+}
+
+/* 12 color interpolation */
+.grad{
+  background:linear-gradient(red,blue);
+}
+
+/* 13 transition behavior */
+.box13{
+  width:100px;
+  height:100px;
+  background:green;
+  transition:all 1s;
+  transition-behavior:allow-discrete;
+}
+.box13:hover{
+  display:none;
+}
+
+/* 14 starting style */
+@starting-style{
+  .card{
+    opacity:0;
+  }
+  .card:not(:hover) { opacity: 0; }
+}
+.card{
+  opacity:1;
+  transition:opacity 1s;
+}
+
+/* 15 field sizing */
+input{
+  field-sizing:content;
+}
+
+/* 16 scope */
+@scope(.scope-box){
+  p{color:red;}
+}
+
+/* 17 interpolate size */
+.expand{
+  width:100px;
+  height:auto;
+  background:orange;
+  transition:all 1s;
+  interpolate-size:allow-keywords;
+}
+.expand:hover{
+  width:200px;
+}
+
+/* 18 property */
+@property --mainColor{
+  syntax:"<color>";
+  initial-value:red;
+}
+.prop{
+  color:var(--mainColor);
+}
+
+/* 19 align-content block */
+.block{
+  height:150px;
+  align-content:center;
+}
+
+/* 20 content visibility */
+.big{
+  content-visibility:auto;
+  height:300px;
+  background:#eee;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>CSS Properties Post 2025 — Examples</h1>
+
+<section>
+<h3>1 animation-timeline</h3>
+<div class="scroll-box">
+<div class="fade"></div>
+</div>
+</section>
+
+<section>
+<h3>2 text-box-trim</h3>
+<h1 class="trim">Trimmed Heading</h1>
+</section>
+
+<section>
+<h3>3 text-box-align</h3>
+<h1 class="align">Aligned Text</h1>
+</section>
+
+<section>
+<h3>4 text-box</h3>
+<p class="textbox">Text box spacing control</p>
+</section>
+
+<section>
+<h3>5–7 Anchor Positioning</h3>
+<button class="anchor-btn">Anchor</button>
+<div class="tooltip">Tooltip</div>
+</section>
+
+<section>
+<h3>8 scrollbar-gutter</h3>
+<div class="scroll-area">Scrollable content<br>more<br>more<br>more</div>
+</section>
+
+<section>
+<h3>9 target text</h3>
+<a href="#t">Click highlight</a>
+<p id="t">Highlighted text</p>
+</section>
+
+<section>
+<h3>10 light-dark</h3>
+<div class="theme">Theme color</div>
+</section>
+
+<section>
+<h3>11 relative color</h3>
+<div class="rel">Color modified</div>
+</section>
+
+<section>
+<h3>12 color interpolation</h3>
+<div class="grad">Gradient</div>
+</section>
+
+<section>
+<h3>13 transition behavior</h3>
+<div class="box13"></div>
+</section>
+
+<section>
+<h3>14 starting style</h3>
+<div class="card">Fade in</div>
+</section>
+
+<section>
+<h3>15 field sizing</h3>
+<input placeholder="Auto size input">
+</section>
+
+<section class="scope-box">
+<h3>16 scope</h3>
+<p>Scoped red text</p>
+</section>
+
+<section>
+<h3>17 interpolate size</h3>
+<div class="expand">Hover me</div>
+</section>
+
+<section>
+<h3>18 property</h3>
+<div class="prop">Custom property text</div>
+</section>
+
+<section>
+<h3>19 align-content block</h3>
+<div class="block">Centered content</div>
+</section>
+
+<section>
+<h3>20 content visibility</h3>
+<div class="big">Large hidden content</div>
+</section>
+
+</body>
+</html>
