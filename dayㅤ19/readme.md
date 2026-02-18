@@ -12,7 +12,17 @@ A simple and fun **Tic-Tac-Toe** game built with HTML, CSS, and JavaScript. Play
 ## Screenshots
 
 **Win:**  
-![Image](https://github.com/user-attachments/assets/db78a1ac-9bf6-4946-8442-fb817153e61b)
+
+![Image](https://github.com/user-attachments/assets/d111a1bc-d3e9-4668-8c93-73561aaf3656)
+
+
+
+
+---
+
 
 **Draw:**  
-![Image](https://github.com/user-attachments/assets/5e11a46c-dafd-4f27-8ef8-a67f1dcf5cd9)
+
+![Image](https://github.com/user-attachments/assets/aa719a0e-bd9c-4c45-9c66-3a96fb9592cc)
+
+---
