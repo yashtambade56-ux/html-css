@@ -1,0 +1,215 @@
+
+        :root {
+            --porsche-red: #d5001c;
+            --porsche-silver: #919191;
+            --dark-bg: #0a0a0a;
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, .navbar-brand {
+            font-family: 'Syncopate', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+        }
+
+        /* --- PORSCHE ACCENTS --- */
+        .glow-text-red { text-shadow: 0 0 15px rgba(213, 0, 28, 0.4); }
+        
+        .btn-porsche-red {
+            border: 1px solid var(--porsche-red);
+            color: white;
+            background: var(--porsche-red);
+            transition: 0.3s;
+            border-radius: 0;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .btn-porsche-red:hover {
+            background: transparent;
+            color: var(--porsche-red);
+            box-shadow: 0 0 20px rgba(213, 0, 28, 0.3);
+        }
+
+        /* --- NAVBAR --- */
+        .navbar {
+            backdrop-filter: blur(20px);
+            background-color: rgba(0, 0, 0, 0.8) !important;
+            border-bottom: 1px solid var(--glass-border);
+            padding: 1.5rem 0;
+            z-index: 1050;
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            color: #fff !important;
+        }
+
+        .nav-link {
+            color: rgba(255,255,255,0.6) !important;
+            font-weight: 400;
+            font-size: 0.8rem;
+            transition: 0.3s;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: #fff !important;
+            border-bottom: 2px solid var(--porsche-red);
+        }
+
+        /* --- HERO CAROUSEL --- */
+        .carousel-container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            background-color: #000;
+        }
+
+        .carousel-slide {
+            display: none;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            animation: fadeScale 1.2s ease-out;
+        }
+
+        @keyframes fadeScale {
+            from { opacity: 0; } 
+            to { opacity: 1; }
+        }
+
+        .carousel-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.6);
+        }
+
+        .caption {
+            position: absolute;
+            top: 50%;
+            left: 10%;
+            transform: translateY(-50%);
+            z-index: 10;
+            max-width: 800px;
+        }
+
+        .caption h1 {
+            font-size: clamp(2.5rem, 10vw, 5rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        /* --- GLASS CARDS --- */
+        .glass-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(15px);
+            border: 1px solid var(--glass-border);
+            border-radius: 4px; /* Sharper luxury edges */
+            transition: all 0.4s ease;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--porsche-red);
+        }
+
+        /* --- PRICING / TIERS --- */
+        .price-tag {
+            font-size: 3rem;
+            font-weight: 700;
+            font-family: 'Syncopate';
+        }
+
+        /* --- GALLERY --- */
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            height: 350px;
+            border: 1px solid var(--glass-border);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        /* --- ALERTS --- */
+        #alertPlaceholder {
+            position: fixed;
+            top: 100px;
+            right: 20px;
+            z-index: 2000;
+            width: 350px;
+        }
+
+        /* --- CUSTOM UI ELEMENTS --- */
+        .nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255,255,255,0.1);
+            border: none;
+            color: white;
+            width: 50px; height: 80px;
+            z-index: 100;
+            transition: 0.3s;
+        }
+        .nav-btn:hover { background: var(--porsche-red); }
+
+        .dot {
+            width: 30px; height: 3px;
+            background: rgba(255,255,255,0.2);
+            display: inline-block;
+            margin: 0 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .active-dot { background: var(--porsche-red); }
+
+        /* --- FORM --- */
+        .form-control, .form-select {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid var(--glass-border);
+            color: white;
+            border-radius: 0;
+            padding: 15px;
+        }
+        .form-control:focus {
+            background: rgba(255,255,255,0.1);
+            border-color: var(--porsche-red);
+            box-shadow: none;
+            color: white;
+        }
+
+        /* --- SCROLL INDICATOR --- */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+            color: #fff;
+            font-size: 1.5rem;
+        }
+
+        .active { display: block; }

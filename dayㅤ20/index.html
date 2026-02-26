@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="https://imgproxy.attic.sh/insecure/f:webp/q:90/w:1920/plain/https://attic.sh/jv7x0ufwya4haagae3s1aznuyjye">
+    <title>PORSCHE | Pure Performance</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
+    
+   <link rel="stylesheet" href="style.css">
+   <style>
+       /* Internal styles to ensure the new table matches your theme */
+       .table-dark {
+           background-color: transparent !important;
+           --bs-table-bg: transparent;
+       }
+       .comparison-table-container {
+           background: rgba(255, 255, 255, 0.05);
+           backdrop-filter: blur(10px);
+           border: 1px solid rgba(255, 255, 255, 0.1);
+           border-radius: 15px;
+       }
+       .table thead th {
+           border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+           text-transform: uppercase;
+           letter-spacing: 1px;
+           font-size: 0.85rem;
+       }
+       .table td {
+           padding: 1.5rem 0.75rem;
+           border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+       }
+       .checkmark {
+           font-size: 1.2rem;
+           color: #fff;
+       }
+   </style>
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top px-4">
+    <div class="container-fluid">
+        <button class="btn btn-outline-light border-0 me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <a class="navbar-brand" href="#">PORSCHE</a>
+        
+        <div class="collapse navbar-collapse" id="navContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ms-4">
+                <li class="nav-item"><a class="nav-link active" href="#">Models</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Customization</a></li>
+                <li class="nav-item"><a class="nav-link" href="#pricing">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Motorsport</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Consultation</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="offcanvas offcanvas-start bg-black text-white" tabindex="-1" id="offcanvasMenu">
+    <div class="offcanvas-header border-bottom border-secondary">
+        <h5 class="offcanvas-title fw-bold" id="offcanvasLabel">PORSCHE MENU</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+        <ul class="navbar-nav fs-6">
+            <li class="nav-item mb-3"><a class="nav-link" href="#">911 GT3 RS</a></li>
+            <li class="nav-item mb-3"><a class="nav-link" href="#">Taycan Turbo S</a></li>
+            <li class="nav-item mb-3"><a class="nav-link" href="#">718 Cayman GT4</a></li>
+            <li class="nav-item mb-3"><a class="nav-link" href="#">Porsche Experience Centers</a></li>
+        </ul>
+    </div>
+</div>
+
+<div id="alertPlaceholder"></div>
+
+<main class="flex-shrink-0">
+    <div class="carousel-container">
+        <div class="carousel-slide active">
+            <img src="https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?auto=format&fit=crop&w=1920&q=80" alt="Porsche 911">
+            <div class="caption">
+                <h1 class="glow-text-red">Driven by<br>Dreams</h1>
+                <p class="lead text-light opacity-75 fs-4">The new 911 GT3. Performance in its purest form.</p>
+                <button class="btn btn-porsche-red px-5 py-3 mt-4">Configure Yours</button>
+            </div>
+        </div>
+
+        <div class="carousel-slide">
+            <img src="https://content-hub.imgix.net/mNmLOXtzTsZMl4xYdNhWY/72985f596adf578a51e6ad30ccb26535/taycan_wallpapers_hero_desktop.jpg?w=2064" alt="Porsche Taycan">
+            <div class="caption">
+                <h1 class="glow-text-red">Soul,<br>Electrified</h1>
+                <p class="lead text-light opacity-75 fs-4">Experience the Taycan. Power meets zero emissions.</p>
+                <button class="btn btn-porsche-red px-5 py-3 mt-4">Discover Taycan</button>
+            </div>
+        </div>
+
+        <div class="carousel-slide">
+            <img src="https://images.ctfassets.net/s699s7kh1jys/5SVCvBdZkaQJ33kBp0f6NE/d158bf90ca7257772c79b700940da503/porsche_911_wallpapers_carrera_cabriolet_1_desktop.jpg" alt="Porsche Racing">
+            <div class="caption">
+                <h1 class="glow-text-red">Motorsport<br>Heritage</h1>
+                <p class="lead text-light opacity-75 fs-4">From the track to your driveway. Zero compromise engineering.</p>
+                <button class="btn btn-porsche-red px-5 py-3 mt-4">Racing History</button>
+            </div>
+        </div>
+
+        <button class="nav-btn" style="left: 0;" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="nav-btn" style="right: 0;" onclick="changeSlide(1)">&#10095;</button>
+
+        <div class="dots-container position-absolute w-100 text-center" style="bottom: 80px;">
+            <span class="dot active-dot" onclick="currentSlide(0)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+        </div>
+
+        <div class="scroll-indicator">↡</div>
+    </div>
+
+    <section id="pricing" class="container py-5 my-5">
+        <div class="text-center mb-5">
+            <h2 class="display-5 fw-bold">Care Programs</h2>
+            <p class="text-secondary fs-5">Premium maintenance for your masterpiece.</p>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-4">
+                <div class="glass-card h-100 p-4 text-center">
+                    <div class="card-body">
+                        <h5 class="text-uppercase text-secondary small fw-bold mb-4">Silver</h5>
+                        <div class="price-tag mb-4">$499<span class="fs-6 text-secondary">/yr</span></div>
+                        <ul class="list-unstyled text-start mb-5 opacity-75">
+                            <li class="mb-2">● Annual Multi-point Inspection</li>
+                            <li class="mb-2">● Fluid Optimization</li>
+                            <li class="mb-2">● Priority Service Booking</li>
+                        </ul>
+                        <button class="btn btn-outline-light w-100 py-2 mb-3" data-bs-toggle="modal" data-bs-target="#starterModal">Details</button>
+                        <button class="btn btn-porsche-red w-100 py-2 buy-btn">Enroll</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="glass-card h-100 p-4 text-center" style="border-top: 4px solid var(--porsche-red);">
+                    <div class="card-body">
+                        <span class="badge bg-danger mb-3 px-3">BEST VALUE</span>
+                        <h5 class="text-uppercase text-light small fw-bold mb-4">Gold</h5>
+                        <div class="price-tag mb-4 glow-text-red">$899<span class="fs-6 text-secondary">/yr</span></div>
+                        <ul class="list-unstyled text-start mb-5">
+                            <li class="mb-2">● Full Performance Tuning</li>
+                            <li class="mb-2">● Track-Day Preparation</li>
+                            <li class="mb-2">● Complimentary Loaner Vehicle</li>
+                        </ul>
+                        <button class="btn btn-outline-danger w-100 py-2 mb-3" data-bs-toggle="modal" data-bs-target="#proModal">Details</button>
+                        <button class="btn btn-danger w-100 py-2 buy-btn shadow">Enroll</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="glass-card h-100 p-4 text-center">
+                    <div class="card-body">
+                        <h5 class="text-uppercase text-secondary small fw-bold mb-4">Platinum</h5>
+                        <div class="price-tag mb-4">$1,499<span class="fs-6 text-secondary">/yr</span></div>
+                        <ul class="list-unstyled text-start mb-5 opacity-75">
+                            <li class="mb-2">● Unlimited Performance Detailing</li>
+                            <li class="mb-2">● Concierge Pickup/Delivery</li>
+                            <li class="mb-2">● Exclusive Event Access</li>
+                        </ul>
+                        <button class="btn btn-outline-light w-100 py-2 mb-3" data-bs-toggle="modal" data-bs-target="#enterpriseModal">Details</button>
+                        <button class="btn btn-porsche-red w-100 py-2 buy-btn">Enroll</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container py-5 my-5">
+        <div class="text-center mb-5">
+            <h2 class="display-5 fw-bold">Compare Plans</h2>
+            <p class="text-secondary fs-5">A detailed view of our digital and physical services.</p>
+        </div>
+        <div class="table-responsive comparison-table-container p-4">
+            <table class="table table-dark align-middle mb-0">
+                <thead>
+                    <tr class="text-center">
+                        <th class="text-start ps-4">Feature</th>
+                        <th>Free</th>
+                        <th>Pro</th>
+                        <th>Enterprise</th>
+                    </tr>
+                </thead>
+                <tbody class="text-center">
+                    <tr>
+                        <td class="text-start ps-4 fw-bold">Public</td>
+                        <td><span class="checkmark">✓</span></td>
+                        <td><span class="checkmark">✓</span></td>
+                        <td><span class="checkmark">✓</span></td>
+                    </tr>
+                    <tr>
+                        <td class="text-start ps-4 fw-bold">Private</td>
+                        <td></td>
+                        <td><span class="checkmark">✓</span></td>
+                        <td><span class="checkmark">✓</span></td>
+                    </tr>
+                    <tr>
+                        <td class="text-start ps-4 fw-bold">Permissions</td>
+                        <td><span class="checkmark">✓</span></td>
+                        <td><span class="checkmark">✓</span></td>
+                        <td><span class="checkmark">✓</span></td>
+                    </tr>
+                    <tr>
+                        <td class="text-start ps-4 fw-bold">Sharing</td>
+                        <td></td>
+                        <td><span class="checkmark">✓</span></td>
+                        <td><span class="checkmark">✓</span></td>
+                    </tr>
+                    <tr>
+                        <td class="text-start ps-4 fw-bold">Unlimited members</td>
+                        <td></td>
+                        <td><span class="checkmark">✓</span></td>
+                        <td><span class="checkmark">✓</span></td>
+                    </tr>
+                    <tr class="border-0">
+                        <td class="text-start ps-4 fw-bold border-0">Extra security</td>
+                        <td class="border-0"></td>
+                        <td class="border-0"></td>
+                        <td class="border-0"><span class="checkmark">✓</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="container py-5 text-center bg-black rounded-1 border border-secondary border-opacity-25 shadow-lg">
+        <h3 class="mb-4">Vehicle Health Status</h3>
+        <div class="d-flex flex-wrap justify-content-center gap-3">
+            <button class="btn btn-success px-4" onclick="appendAlert('Launch Control Ready.', 'success')">Check Systems</button>
+            <button class="btn btn-warning px-4" onclick="appendAlert('Low Tire Pressure Detected - Left Rear.', 'warning')">Check Tires</button>
+            <button class="btn btn-danger px-4" onclick="appendAlert('Service required: PDK Transmission.', 'danger')">Critical Error</button>
+            <button class="btn btn-info px-4 text-white" onclick="appendAlert('PCM Update 4.2 Available.', 'info')">System Update</button>
+        </div>
+    </section>
+
+    <section class="container py-5 my-5">
+        <h2 class="text-center mb-5">Design Excellence</h2>
+        <div class="row g-3">
+            <div class="col-md-4"><div class="gallery-item" data-bs-toggle="tooltip"><img src="https://images.unsplash.com/photo-1553032674-e1cd6fb0fe18?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTUyfHxwb3JzY2hlJTIwd2FsbHBhcGVyfGVufDB8fDB8fHww"></div></div>
+            <div class="col-md-4"><div class="gallery-item" data-bs-toggle="tooltip"><img src="https://images.unsplash.com/photo-1688398658141-d39eda099217?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"></div></div>
+            <div class="col-md-4"><div class="gallery-item" data-bs-toggle="tooltip"><img src="https://images.unsplash.com/photo-1607049641197-3aa77cecf921?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTA5fHxwb3JzY2hlJTIwd2FsbHBhcGVyfGVufDB8fDB8fHww"></div></div>
+            <div class="col-md-4"><div class="gallery-item" data-bs-toggle="tooltip"><img src="https://images.unsplash.com/photo-1687815529363-846223d93c55?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cG9yc2NoZSUyMHdhbGxwYXBlcnxlbnwwfHwwfHx8MA%3D%3D"></div></div>
+            <div class="col-md-4"><div class="gallery-item" data-bs-toggle="tooltip"><img src="https://images.unsplash.com/photo-1633348570573-2c70fe9129de?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTV8fHBvcnNjaGUlMjB3YWxscGFwZXJ8ZW58MHx8MHx8fDA%3D"></div></div>
+            <div class="col-md-4"><div class="gallery-item" data-bs-toggle="tooltip"><img src="https://images.unsplash.com/photo-1633836141682-4ed9451830cf?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTEzfHxwb3JzY2hlJTIwd2FsbHBhcGVyfGVufDB8fDB8fHww"></div></div>
+            <div class="col-md-4"><div class="gallery-item" data-bs-toggle="tooltip"><img src="https://images.unsplash.com/photo-1598472057811-4cb32cfdb3e6?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDMyfHxwb3JzY2hlJTIwd2FsbHBhcGVyfGVufDB8fDB8fHww"></div></div>
+            <div class="col-md-4"><div class="gallery-item" data-bs-toggle="tooltip"><img src="https://images.unsplash.com/photo-1731713998250-11c583039ad5?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDgzfHxwb3JzY2hlJTIwd2FsbHBhcGVyfGVufDB8fDB8fHww"></div></div>
+            <div class="col-md-4"><div class="gallery-item" data-bs-toggle="tooltip"><img src="https://images.unsplash.com/photo-1635707109073-922d81b61ae2?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjd8fHBvcnNjaGUlMjB3YWxscGFwZXJ8ZW58MHx8MHx8fDA%3D"></div></div>
+        </div>
+    </section>
+
+    <section id="contact" class="container py-5 my-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 glass-card p-5">
+                <h2 class="text-center mb-4">Request a Consultation</h2>
+                <form id="axonForm" class="row g-3 needs-validation" novalidate>
+                    <div class="col-md-6">
+                        <label class="form-label small text-secondary">Full Name</label>
+                        <input type="text" class="form-control" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label small text-secondary">Email Address</label>
+                        <input type="email" class="form-control" required>
+                    </div>
+                    <div class="col-md-12">
+                        <label class="form-label small text-secondary">Preferred Porsche Center</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="col-md-12">
+                        <label class="form-label small text-secondary">Model of Interest</label>
+                        <select class="form-select" required>
+                            <option value="">Select a model...</option>
+                            <option>911 Carrera</option>
+                            <option>718 Boxster</option>
+                            <option>Taycan</option>
+                            <option>Panamera</option>
+                            <option>Macan/Cayenne</option>
+                        </select>
+                    </div>
+                    <div class="col-12 text-center mt-4">
+                        <button type="submit" class="btn btn-porsche-red btn-lg px-5 shadow-lg">Submit Request</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</main>
+
+<div class="modal fade" id="starterModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered"><div class="modal-content bg-dark border-secondary text-white p-4 text-center"><h5>Silver Program</h5><p class="text-secondary">Standard care to ensure your vehicle meets factory standards year-round.</p><button class="btn btn-porsche-red" data-bs-dismiss="modal">Close</button></div></div>
+</div>
+<div class="modal fade" id="proModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered"><div class="modal-content bg-dark border-danger text-white p-4 text-center"><h5>Gold Program</h5><p class="text-secondary">Our most popular choice for performance enthusiasts and daily drivers.</p><button class="btn btn-danger" data-bs-dismiss="modal">Close</button></div></div>
+</div>
+<div class="modal fade" id="enterpriseModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered"><div class="modal-content bg-dark border-info text-white p-4 text-center"><h5>Platinum Elite</h5><p class="text-secondary">Comprehensive lifestyle management for your automotive collection.</p><button class="btn btn-outline-light" data-bs-dismiss="modal">Close</button></div></div>
+</div>
+
+<footer class="footer py-5 mt-auto bg-black border-top border-secondary border-opacity-25">
+    <div class="container text-center">
+        <h4 class="mb-4">PORSCHE</h4>
+        <div class="mb-4">
+            <a href="#" class="text-white-50 mx-3 text-decoration-none small">Instagram</a>
+            <a href="#" class="text-white-50 mx-3 text-decoration-none small">YouTube</a>
+            <a href="#" class="text-white-50 mx-3 text-decoration-none small">Porsche Club</a>
+        </div>
+        <p class="small text-secondary">&copy; 2026 Dr. Ing. h.c. F. Porsche AG. All rights reserved.</p>
+    </div>
+</footer>
+
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="statusToast" class="toast align-items-center text-white bg-danger border-0" role="alert">
+        <div class="d-flex"><div class="toast-body fw-bold">⚠️ Our server is experiencing high traffic. Please try again.</div><button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button></div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
