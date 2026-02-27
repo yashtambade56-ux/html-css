@@ -27,14 +27,14 @@ All implemented inside a **single production-ready structure (1 HTML + 1 CSS fil
 
 # Project Structure
 
+        
+Frontend-Master/                           
+│                              
+├── index.html                    
+├── style.css            
+└── README.md       
 
-Frontend-Master/
-│
-├── index.html
-├── style.css
-└── README.md
-
-
+           
 ---
 
 # Design Decisions
