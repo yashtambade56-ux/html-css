@@ -30,9 +30,10 @@ All implemented inside a **single production-ready structure (1 HTML + 1 CSS fil
         
 Frontend-Master/                           
 │                              
-├── index.html                    
-├── style.css            
-└── README.md       
+├── README.md                   
+├── Report.pdf            
+├── index.html                               
+└── style.css                        
 
            
 ---
