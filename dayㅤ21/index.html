@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <title>Frontend Master</title>
+    <link rel="stylesheet" href="style.css">
+
+<body>
+
+    <header class="header" role="banner">
+        <nav class="container" aria-label="Main Navigation">
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 0;">
+                <a href="#" class="logo" aria-label="Frontend Master Homepage"
+                    style="font-size: 1.5rem; font-weight: 800; text-decoration: none; color: var(--primary);">FRONTEND
+                    MASTER</a>
+
+                <input type="checkbox" id="menu-state" class="sr-only">
+                <label for="menu-state" class="menu-toggle" aria-label="Toggle Menu">
+                    <span></span><span></span><span></span>
+                </label>
+
+                <ul class="nav-links" style="display: flex; list-style: none; gap: 2rem;">
+                    <li><a href="#section-a" style="text-decoration: none; color: var(--text-main);">HTML</a></li>
+                    <li><a href="#section-b" style="text-decoration: none; color: var(--text-main);">CSS</a></li>
+                    <li><a href="#section-c" style="text-decoration: none; color: var(--text-main);">Layouts</a></li>
+                    <li><a href="#section-d" style="text-decoration: none; color: var(--text-main);">Effects</a></li>
+                    <li><a href="#section-e" style="text-decoration: none; color: var(--text-main);">Responsive</a></li>
+                    <li class="dropdown">
+                        <a href="#section-f" style="text-decoration: none; color: var(--text-main);">Features ▾</a>
+                        <ul class="dropdown-content">
+                            <li><a href="#"
+                                    style="display: block; padding: 1rem; text-decoration: none; color: var(--text-main);">SaaS
+                                    Landing</a></li>
+                            <li class="dropdown-item">
+                                <a href="#"
+                                    style="display: block; padding: 1rem; text-decoration: none; color: var(--text-main);">Commerce
+                                    ▸</a>
+                                <ul class="sub-dropdown-content">
+                                    <li><a href="#"
+                                            style="display: block; padding: 1rem; text-decoration: none; color: var(--text-main);">Electronics</a>
+                                    </li>
+                                    <li><a href="#"
+                                            style="display: block; padding: 1rem; text-decoration: none; color: var(--text-main);">Fashion</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <div class="container" style="max-width: 800px;">
+                <h1>The Future of <span style="color: var(--accent);">Web Engineering</span></h1>
+                <p style="color: white; font-size: 1.25rem;">A 75-task masterclass in modern frontend architecture.
+                    Built with zero frameworks, infinite precision, and extreme performance.</p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <button class="btn-animated"
+                        style="background: var(--primary); color: white; border-radius: var(--radius-sm);">Explore
+                        Architecture</button>
+                    <button class="btn-animated" style="color: white; border-color: white;">View Codebase</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION A: ADVANCED HTML -->
+        <section id="section-a" class="section">
+            <div class="container">
+                <header class="section-title">
+                    <h2>SECTION A: Advanced HTML</h2>
+                    <p>Semantic structures, accessibility, and modern document features.</p>
+                </header>
+
+                <div class="with-sidebar">
+                    <article>
+                        <!-- 1. Semantic vs Non-Semantic -->
+                        <h3>1. Semantic vs Non-Semantic</h3>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 3rem;">
+                            <div style="background: #fee; padding: 1rem; border-radius: 8px;">
+                                <strong>Bad (Non-semantic):</strong>
+                                <code>&lt;div class="header"&gt;...&lt;/div&gt;</code>
+                            </div>
+                            <div style="background: #efe; padding: 1rem; border-radius: 8px;">
+                                <strong>Good (Semantic):</strong>
+                                <code>&lt;header&gt;...&lt;/header&gt;</code>
+                            </div>
+                        </div>
+
+                        <!-- 2. Fully Semantic Blog Layout -->
+                        <h3>2. Semantic Blog Layout</h3>
+                        <article
+                            style="border: 1px solid var(--border); padding: 2rem; border-radius: 8px; margin-bottom: 3rem;">
+                            <header>
+                                <h4>The Art of Code Splitting</h4>
+                                <p><time datetime="2026-02-27">February 27, 2026</time> by
+                                <address style="display: inline;">Agentic Architect</address>
+                                </p>
+                            </header>
+                            <p>Exploring the performance benefits of modular architecture...</p>
+                            <footer style="font-size: 0.9rem; border-top: 1px solid var(--border); padding-top: 1rem;">
+                                Filed under: <a href="#">Performance</a>, <a href="#">Architecture</a>
+                            </footer>
+                        </article>
+
+                        <!-- 4. ARIA Demo -->
+                        <h3 id="aria-demo-title">4. ARIA Labels & Descriptions</h3>
+                        <div style="margin-bottom: 3rem;">
+                            <button aria-label="Close modal content" style="padding: 0.5rem 1rem;">×</button>
+                            <div id="desc-1">Detailed information about the complex component for screen readers.</div>
+                            <button aria-describedby="desc-1" style="padding: 1rem;">Info Component</button>
+                        </div>
+
+                        <!-- 5. Complex Accessible Form -->
+                        <h3>5. Advanced Forms</h3>
+                        <form
+                            style="background: var(--bg-surface); padding: 2rem; border-radius: 12px; box-shadow: var(--shadow-sm);">
+                            <fieldset
+                                style="border: 1px solid var(--border); padding: 1.5rem; border-radius: 8px; margin-bottom: 1.5rem;">
+                                <legend style="font-weight: bold; padding: 0 0.5rem;">User Information</legend>
+                                <div class="form-group">
+                                    <input type="text" id="username" class="form-input" placeholder=" " required
+                                        pattern="[A-Za-z0-9]{3,20}">
+                                    <label for="username" class="form-label">Username (3-20 characters)</label>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" id="email" class="form-input" placeholder=" " required>
+                                    <label for="email" class="form-label">Email Address</label>
+                                </div>
+                            </fieldset>
+
+                            <fieldset
+                                style="border: 1px solid var(--border); padding: 1.5rem; border-radius: 8px; margin-bottom: 1.5rem;">
+                                <legend style="font-weight: bold; padding: 0 0.5rem;">Selection</legend>
+                                <label for="browser" style="display: block; margin-bottom: 0.5rem;">Choose your
+                                    platform:</label>
+                                <input list="platforms" id="browser"
+                                    style="width: 100%; padding: 0.8rem; border: 1px solid var(--border); border-radius: 4px;">
+                                <datalist id="platforms">
+                                    <option value="Next.js">
+                                    <option value="Advanced Vanilla">
+                                    <option value="Web Components">
+                                    <option value="Rust/WASM">
+                                </datalist>
+                            </fieldset>
+                            <button type="submit" class="btn-animated"
+                                style="background: var(--primary); color: white; width: 100%; border-radius: 4px;">Submit
+                                Architecture Request</button>
+                        </form>
+                    </article>
+
+                    <aside class="sidebar">
+                        <!-- 7. FAQ Details/Summary -->
+                        <h3>7. FAQ System</h3>
+                        <details style="border-bottom: 1px solid var(--border); padding-block: 1rem;">
+                            <summary style="cursor: pointer; font-weight: 600;">What is Semantic HTML?</summary>
+                            <p style="padding-top: 1rem;">Semantic HTML uses elements that clearly describe their
+                                meaning in a human- and machine-readable way.</p>
+                        </details>
+                        <details style="border-bottom: 1px solid var(--border); padding-block: 1rem;">
+                            <summary style="cursor: pointer; font-weight: 600;">How does ARIA help?</summary>
+                            <p style="padding-top: 1rem;">ARIA provides a way to communicate accessibility information
+                                that isn't conveyed through standard HTML tags.</p>
+                        </details>
+
+                        <!-- 9. Responsive Images -->
+                        <h3 style="margin-top: 2rem;">9. Responsive Images</h3>
+                        <picture>
+                            <source srcset="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400"
+                                media="(max-width: 480px)">
+                            <source srcset="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800"
+                                media="(max-width: 1024px)">
+                            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200"
+                                alt="Code on a screen" loading="lazy" width="800" height="400">
+                        </picture>
+
+                        <!-- 11. Accessible Video -->
+                        <h3 style="margin-top: 2rem;">11. Accessible Video</h3>
+                        <div
+                            style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px;">
+                            <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+                                src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Architecture Overview Video"
+                                frameborder="0" allowfullscreen></iframe>
+                        </div>
+
+                        <!-- 13. Pricing Table -->
+                        <h3 style="margin-top: 2rem;">13. Pricing Architecture</h3>
+                        <div style="overflow-x: auto;">
+                            <table style="width: 100%; border-collapse: collapse; margin-block: 1rem;">
+                                <thead>
+                                    <tr style="background: var(--primary); color: white;">
+                                        <th style="padding: 1rem; text-align: left;">Feature</th>
+                                        <th style="padding: 1rem;">Basic</th>
+                                        <th style="padding: 1rem;">Enterprise</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td style="padding: 1rem; border-bottom: 1px solid var(--border);">Uptime</td>
+                                        <td
+                                            style="padding: 1rem; border-bottom: 1px solid var(--border); text-align: center;">
+                                            99%</td>
+                                        <td
+                                            style="padding: 1rem; border-bottom: 1px solid var(--border); text-align: center;">
+                                            99.99%</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 1rem; border-bottom: 1px solid var(--border);">Support</td>
+                                        <td
+                                            style="padding: 1rem; border-bottom: 1px solid var(--border); text-align: center;">
+                                            Email</td>
+                                        <td
+                                            style="padding: 1rem; border-bottom: 1px solid var(--border); text-align: center;">
+                                            24/7 Phone</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION C: LAYOUTS -->
+        <section id="section-c" class="section" style="background: var(--bg-surface);">
+            <div class="container">
+                <header class="section-title">
+                    <h2>SECTION C: Advanced Layouts</h2>
+                    <p>Harnessing the full power of CSS Grid and Flexbox.</p>
+                </header>
+
+                <h3>12-Column Grid Demo</h3>
+                <div class="grid-12">
+                    <div style="grid-column: span 12;">Col 12</div>
+                    <div style="grid-column: span 6;">Col 6</div>
+                    <div style="grid-column: span 6;">Col 6</div>
+                    <div style="grid-column: span 4;">Col 4</div>
+                    <div style="grid-column: span 4;">Col 4</div>
+                    <div style="grid-column: span 4;">Col 4</div>
+                </div>
+
+                <h3>Masonry Gallery</h3>
+                <div class="masonry" style="margin-bottom: 4rem;">
+                    <div class="masonry-item item-short">Architecture Spot 1</div>
+                    <div class="masonry-item item-tall">Modular Detail 2</div>
+                    <div class="masonry-item item-medium">System View 3</div>
+                    <div class="masonry-item item-tall">Data Flow 4</div>
+                    <div class="masonry-item item-short">UI Schema 5</div>
+                    <div class="masonry-item item-medium">Backend Sync 6</div>
+                </div>
+
+                <h3>Admin Dashboard Mockup</h3>
+                <div
+                    style="display: grid; grid-template-columns: 250px 1fr; gap: 1rem; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; height: 500px;">
+                    <nav style="background: var(--primary-dark); color: white; padding: 1rem;">
+                        <ul style="list-style: none; display: grid; gap: 1rem;">
+                            <li><a href="#"
+                                    style="color: white; text-decoration: none; font-weight: bold;">Dashboard</a></li>
+                            <li><a href="#" style="color: rgba(255,255,255,0.7); text-decoration: none;">Analytics</a>
+                            </li>
+                            <li><a href="#" style="color: rgba(255,255,255,0.7); text-decoration: none;">Users</a></li>
+                            <li><a href="#" style="color: rgba(255,255,255,0.7); text-decoration: none;">Settings</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div style="background: var(--bg-main); padding: 2rem; overflow-y: auto;">
+                        <h4>Performance Overview</h4>
+                        <div
+                            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-top: 1rem;">
+                            <div class="neu-card" style="padding: 1rem;">
+                                <h6>98/100</h6>
+                                <p style="font-size: 0.8rem;">Lighthouse Score</p>
+                            </div>
+                            <div class="neu-card" style="padding: 1rem;">
+                                <h6>0.8s</h6>
+                                <p style="font-size: 0.8rem;">FCP Time</p>
+                            </div>
+                            <div class="neu-card" style="padding: 1rem;">
+                                <h6>0.01</h6>
+                                <p style="font-size: 0.8rem;">CLS Shift</p>
+                            </div>
+                        </div>
+                        <div
+                            style="margin-top: 2rem; background: var(--bg-surface); padding: 1.5rem; border-radius: 8px;">
+                            <h5>Recent Activity</h5>
+                            <div class="skeleton" style="width: 100%;"></div>
+                            <div class="skeleton" style="width: 80%;"></div>
+                            <div class="skeleton" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION D: EFFECTS & ANIMATIONS -->
+        <section id="section-d" class="section">
+            <div class="container">
+                <header class="section-title">
+                    <h2>SECTION D: Effects & Animations</h2>
+                    <p>Premium visual interactions and state-of-the-art styling.</p>
+                </header>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 3rem;">
+
+                    <!-- Glassmorphism -->
+                    <div class="glass-card"
+                        style="background: linear-gradient(45deg, var(--primary), var(--accent)); color: white;">
+                        <h3>Glassmorphism</h3>
+                        <p>Modern UI trend using backdrop-filter blur and transparency.</p>
+                        <div class="spinner" style="border-top-color: white;"></div>
+                    </div>
+
+                    <!-- Neumorphism -->
+                    <div class="neu-card">
+                        <h3>Neumorphism</h3>
+                        <p>Soft UI using calculated light and shadow for depth.</p>
+                        <button class="btn-animated"
+                            style="background: var(--bg-main); border: 1px solid var(--border); border-radius: 8px;">Press
+                            Component</button>
+                    </div>
+
+                    <!-- 3D Card -->
+                    <div class="card-3d">
+                        <div class="card-3d-inner">
+                            <div class="card-3d-front">
+                                <span>3D Hover Logic</span>
+                            </div>
+                            <div class="card-3d-back">
+                                <span>Backface Visibility</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div style="margin-top: 4rem;">
+                    <h3>Parallax Effect Demo</h3>
+                    <div class="parallax-container" style="border-radius: 12px; border: 1px solid var(--border);">
+                        <div class="parallax-group">
+                            <div class="parallax-layer parallax-back"></div>
+                            <div class="parallax-layer parallax-base">
+                                <h1 style="text-shadow: 2px 2px 10px rgba(0,0,0,0.5);">Depth Perception</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION E: RESPONSIVE DESIGN -->
+        <section id="section-e" class="section" style="background: var(--bg-surface);">
+            <div class="container">
+                <header class="section-title">
+                    <h2>SECTION E: Responsive Systems</h2>
+                    <p>Adaptive layouts that excel on every device size.</p>
+                </header>
+
+                <h3>Fluid Typography & Clamp</h3>
+                <p
+                    style="font-size: clamp(1rem, 2.5vw, 1.5rem); background: var(--primary-light); padding: 2rem; border-radius: 8px; border-left: 5px solid var(--primary);">
+                    This text uses <code>clamp(1rem, 2.5vw, 1.5rem)</code>. Resize your browser to see it scale smoothly
+                    between 16px and 24px without media query jumps.
+                </p>
+
+                <h3>Breakpoint Visualization</h3>
+                <div style="display: grid; gap: 1rem; grid-template-columns: repeat(1, 1fr);">
+                    <!-- These will change column count via style.css or inline-media -->
+                    <style>
+                        .resp-grid {
+                            display: grid;
+                            gap: 1rem;
+                        }
+
+                        @media (min-width: 480px) {
+                            .resp-grid {
+                                grid-template-columns: repeat(2, 1fr);
+                            }
+                        }
+
+                        @media (min-width: 768px) {
+                            .resp-grid {
+                                grid-template-columns: repeat(3, 1fr);
+                            }
+                        }
+
+                        @media (min-width: 1024px) {
+                            .resp-grid {
+                                grid-template-columns: repeat(4, 1fr);
+                            }
+                        }
+
+                        @media (min-width: 1440px) {
+                            .resp-grid {
+                                grid-template-columns: repeat(5, 1fr);
+                            }
+                        }
+                    </style>
+                    <div class="resp-grid">
+                        <div style="background: var(--border); height: 100px; display: grid; place-items: center;">480px
+                        </div>
+                        <div style="background: var(--border); height: 100px; display: grid; place-items: center;">768px
+                        </div>
+                        <div style="background: var(--border); height: 100px; display: grid; place-items: center;">
+                            1024px</div>
+                        <div style="background: var(--border); height: 100px; display: grid; place-items: center;">
+                            1440px</div>
+                        <div style="background: var(--border); height: 100px; display: grid; place-items: center;">
+                            Retina+</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION F: MASTER FEATURES -->
+        <section id="section-f" class="section">
+            <div class="container">
+                <header class="section-title">
+                    <h2>SECTION F: Final Master Project Features</h2>
+                    <p>Production-level sections for diverse industry requirements.</p>
+                </header>
+
+                <h3>SaaS Pricing Section</h3>
+                <div class="pricing-container">
+                    <div class="pricing-card">
+                        <h5>Solo Engineer</h5>
+                        <div style="font-size: 2.5rem; font-weight: 800; margin-block: 1rem;">$29<span
+                                style="font-size: 1rem;">/mo</span></div>
+                        <ul style="list-style: none; margin-bottom: 2rem; display: grid; gap: 0.5rem;">
+                            <li>✓ Advanced HTML5</li>
+                            <li>✓ CSS3 Layouts</li>
+                            <li>✓ Basic ARIA</li>
+                        </ul>
+                        <button class="btn-animated" style="width: 100%; border: 2px solid var(--border);">Get
+                            Started</button>
+                    </div>
+                    <div class="pricing-card featured">
+                        <h5>Architect</h5>
+                        <div style="font-size: 2.5rem; font-weight: 800; margin-block: 1rem; color: var(--primary);">
+                            $99<span style="font-size: 1rem;">/mo</span></div>
+                        <ul style="list-style: none; margin-bottom: 2rem; display: grid; gap: 0.5rem;">
+                            <li>✓ All Solo Features</li>
+                            <li>✓ Performance Tuning</li>
+                            <li>✓ Master WCAG Compliance</li>
+                        </ul>
+                        <button class="btn-animated" style="width: 100%; background: var(--primary); color: white;">Try
+                            Architect</button>
+                    </div>
+                </div>
+
+                <h3 style="margin-top: 5rem;">eCommerce Display</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+                    <div
+                        style="background: var(--bg-surface); border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-md);">
+                        <img src="https://images.unsplash.com/photo-152327533bc64-1920ad2c0117?q=80&w=1912&auto=format&fit=crop"
+                            alt="Premium Watch">
+                        <div style="padding: 1.5rem;">
+                            <div
+                                style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                                <span style="font-weight: bold;">Luxury Chrono</span>
+                                <span style="color: var(--accent); font-weight: 800;">$599</span>
+                            </div>
+                            <button class="btn-animated"
+                                style="width: 100%; background: var(--text-main); color: white; border-radius: 4px;">Add
+                                to Bundle</button>
+                        </div>
+                    </div>
+                    <div
+                        style="background: var(--bg-surface); border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-md);">
+                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=2070&auto=format&fit=crop"
+                            alt="Wireless Headphones">
+                        <div style="padding: 1.5rem;">
+                            <div
+                                style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                                <span style="font-weight: bold;">Sonic Flow Max</span>
+                                <span style="color: var(--accent); font-weight: 800;">$299</span>
+                            </div>
+                            <button class="btn-animated"
+                                style="width: 100%; background: var(--text-main); color: white; border-radius: 4px;">Add
+                                to Bundle</button>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 style="margin-top: 5rem;">Streaming Platform UI</h3>
+                <div
+                    style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; background: #000; padding: 2rem; border-radius: 12px;">
+                    <div
+                        style="aspect-ratio: 16/9; background: #222; position: relative; border-radius: 4px; overflow: hidden;">
+                        <img src="https://images.unsplash.com/photo-1616469829581-73993eb86b02?w=400" alt="Video cover"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                        <span
+                            style="position: absolute; bottom: 5px; right: 5px; background: rgba(0,0,0,0.8); color: white; padding: 2px 5px; font-size: 0.7rem;">12:04</span>
+                    </div>
+                    <div
+                        style="aspect-ratio: 16/9; background: #222; position: relative; border-radius: 4px; overflow: hidden;">
+                        <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=400" alt="Video cover"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div
+                        style="aspect-ratio: 16/9; background: #222; position: relative; border-radius: 4px; overflow: hidden;">
+                        <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?w=400" alt="Video cover"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div
+                        style="aspect-ratio: 16/9; background: #222; position: relative; border-radius: 4px; overflow: hidden;">
+                        <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=400" alt="Video cover"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="section" style="background: var(--bg-surface); border-top: 1px solid var(--border);">
+        <div class="container"
+            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3rem;">
+            <div>
+                <h4 style="margin-bottom: 1.5rem;">FRONTEND MASTER</h4>
+                <p>Pushing the boundaries of what's possible with vanilla technologies.</p>
+            </div>
+            <div>
+                <h5 style="margin-bottom: 1rem;">Core Topics</h5>
+                <ul style="list-style: none; display: grid; gap: 0.5rem;">
+                    <li><a href="#" style="text-decoration: none; color: var(--text-muted);">Semantic HTML</a></li>
+                    <li><a href="#" style="text-decoration: none; color: var(--text-muted);">Modern CSS</a></li>
+                    <li><a href="#" style="text-decoration: none; color: var(--text-muted);">Accessibility</a></li>
+                    <li><a href="#" style="text-decoration: none; color: var(--text-muted);">Performance</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 style="margin-bottom: 1rem;">Engineering</h5>
+                <ul style="list-style: none; display: grid; gap: 0.5rem;">
+                    <li><a href="#" style="text-decoration: none; color: var(--text-muted);">Design Systems</a></li>
+                    <li><a href="#" style="text-decoration: none; color: var(--text-muted);">Interaction Theory</a></li>
+                    <li><a href="#" style="text-decoration: none; color: var(--text-muted);">Micro-animations</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 style="margin-bottom: 1rem;">Newsletter</h5>
+                <div class="form-group" style="margin-bottom: 0;">
+                    <input type="email" class="form-input" placeholder=" " id="news-email">
+                    <label for="news-email" class="form-label">Email Address</label>
+                </div>
+                <button class="btn-animated"
+                    style="background: var(--primary); color: white; width: 100%; margin-top: 1rem; border-radius: 4px;">Subscribe</button>
+            </div>
+        </div>
+        <div class="container"
+            style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--border); text-align: center; color: var(--text-muted); font-size: 0.9rem;">
+            &copy; 2026 Frontend Master Architecture. All Rights Reserved.
+        </div>
+    </footer>
+
+    <!-- SCROLL SNAP SNIPPET (Demonstration) -->
+    <div
+        style="height: 300px; overflow-x: auto; display: flex; scroll-snap-type: x mandatory; gap: 1rem; padding: 2rem; background: var(--bg-main);">
+        <div
+            style="flex: 0 0 100%; scroll-snap-align: center; background: var(--primary); display: grid; place-items: center; color: white; border-radius: 12px;">
+            Testimonial 1: "Revolutionary architecture"</div>
+        <div
+            style="flex: 0 0 100%; scroll-snap-align: center; background: var(--accent); display: grid; place-items: center; color: white; border-radius: 12px;">
+            Testimonial 2: "Pure CSS brilliance"</div>
+        <div
+            style="flex: 0 0 100%; scroll-snap-align: center; background: var(--success); display: grid; place-items: center; color: white; border-radius: 12px;">
+            Testimonial 3: "Accessibility at its core"</div>
+    </div>
+
+</body>
+
+</html>
