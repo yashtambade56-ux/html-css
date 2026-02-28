@@ -82,12 +82,12 @@ https://yashhh710.github.io/tic-tac-toe-html-css/index.html
 
 Day 20              
 Porsche Landing Page         
-High-performance UI design focusing on luxury aesthetics and smooth interactions.
+High-performance UI design focusing on luxury aesthetics and smooth interactions.                
 https://yashhh710.github.io/porshe/                  
 
 Day 21            
 Frontend Mastery Hub       
-A centralized dashboard showcasing a collection of advanced web development projects.
+A centralized dashboard showcasing a collection of advanced web development projects.                    
 https://yashhh710.github.io/Frontend-Master/             
 
 ---
