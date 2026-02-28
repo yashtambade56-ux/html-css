@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Play with Bot</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+
+html,body{
+  height:100%;
+  font-family:Arial,sans-serif;
+  background:url('modelsa/playwithbotbg.jpeg') no-repeat center center;
+  background-size:cover;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+/* BACK BUTTON */
+#back-btn{
+position:fixed;
+top:2vmin;
+left:2vmin;
+padding:1.2vmin 2.8vmin;
+font-size:2vmin;
+font-weight:bold;
+color:#111;
+background:linear-gradient(145deg,#fff176,#ffd600);
+border:none;
+border-radius:2vmin;
+cursor:pointer;
+overflow:hidden;
+z-index:10;
+box-shadow:0 .4vmin .8vmin rgba(0,0,0,.25);
+transition:.35s;
+}
+
+#back-btn:before{
+position:absolute;
+top:-40%;
+left:-60%;
+width:60%;
+height:180%;
+background:radial-gradient(circle,rgba(255,255,255,.9),transparent 60%);
+transform:rotate(25deg);
+transition:.6s;
+}
+
+#back-btn:hover:before{
+left:130%;
+}
+
+#back-btn:hover{
+transform:translateY(-2px) scale(1.05);
+box-shadow:0 .7vmin 1.5vmin rgba(0,0,0,.35);
+}
+
+
+/* MAIN PANEL */
+#game-container{
+  background:rgba(10, 106, 10, 0.596);
+  padding:3vmin 2vmin;
+  border-radius:2vmin;
+  display:flex;
+  flex-direction:row;
+  gap:4vmin;
+  margin-bottom: 48vmin;
+  margin-top: 24vmin;
+  margin-left: 20vmin;
+  margin-right: 23vmin
+}
+
+/* LEFT PANEL */
+#left-panel{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+}
+
+#title{
+  font-size:4vmin;
+  color:yellow;
+  text-shadow:0 0 2vmin #ffc400;
+  animation:titleGlow 1.5s infinite alternate;
+}
+
+@keyframes titleGlow{
+  from{ text-shadow:0 0 1.5vmin #ffc400; }
+  to{ text-shadow:0 0 3vmin #ffff00; }
+}
+
+#message{
+  margin-top:1.5vmin;
+  font-size:2.2vmin;
+  color:yellow;
+  height:3vmin;
+}
+
+/* SMALLER BOARD */
+#board{
+  display:grid;
+  grid-template-columns:repeat(3,8vmin);
+  grid-template-rows:repeat(3,8vmin);
+  gap:0.8vmin;
+}
+
+/* CELLS */
+.cell{
+  width:8vmin;
+  height:8vmin;
+  background:rgba(255,255,255,0.1);
+  border-radius:1vmin;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  font-size:4vmin;
+  color:yellow;
+  cursor:pointer;
+  user-select:none;
+  transition:.25s;
+}
+
+.cell:hover{
+  transform:scale(1.08);
+  background:rgba(255,255,255,0.2);
+}
+
+.xo-animate{
+  animation:popFade .3s ease forwards;
+}
+
+@keyframes popFade{
+  0%{transform:scale(.2);opacity:0;}
+  50%{transform:scale(1.2);opacity:1;}
+  100%{transform:scale(1);opacity:1;}
+}
+
+/* RESET */
+#reset-btn{
+  margin-top:2vmin;
+  padding:1vmin 3vmin;
+  font-size:2vmin;
+  font-weight:bold;
+  color:rgb(255, 255, 255);
+
+  background:linear-gradient(120deg,#ffe600,#ffd000,#fff066);
+  border:none;
+  border-radius:0.9vmin;
+  cursor:pointer;
+
+  box-shadow:0 0 1.5vmin #ffc400;
+
+  position:relative;
+  overflow:hidden;
+
+  transition:transform .25s ease, box-shadow .35s ease;
+}
+
+/* holographic */
+#reset-btn::before{
+  content:"";
+  position:absolute;
+  inset:-40%;
+
+  background:linear-gradient(
+    120deg,
+    transparent 20%,
+    rgb(0, 255, 51),
+    rgb(9, 188, 0),
+    rgb(0, 142, 7),
+    rgb(0, 55, 5),
+    transparent 80%
+  );
+  transform:translateX(-100%) rotate(15deg);
+  transition:transform .7s ease;
+}
+
+#reset-btn:hover::before{
+  transform:translateX(100%) rotate(15deg);
+}
+
+#reset-btn:hover{
+  box-shadow:
+    0 0 1.5vmin #ffe600,
+    0 0 3vmin rgba(255,255,0,.6),
+    0 0 4.5vmin rgba(0,255,255,.4);
+}
+
+#reset-btn:active{
+  transform:scale(.96);
+}
+
+/* SCOREBOARD */
+#scoreboard{
+  margin-top:1.2vmin;
+  font-size:2.3vmin;
+  color:yellow;
+  font-weight:bold;
+}
+
+
+</style>
+</head>
+
+<body>
+
+<button id="back-btn" onclick="history.back()">← Back</button>
+
+<div id="game-container">
+
+  <div id="left-panel">
+    <div id="title">Play with Bot</div>
+    <div id="message"></div>
+
+    <div id="scoreboard">
+You: <span id="youScore">0</span> |
+Bot: <span id="botScore">0</span> |
+Tie: <span id="tieScore">0</span>
+</div>
+
+    <button id="reset-btn">Reset</button>
+  </div>
+
+  <div id="board">
+    <div class="cell" data-index="0"></div>
+    <div class="cell" data-index="1"></div>
+    <div class="cell" data-index="2"></div>
+    <div class="cell" data-index="3"></div>
+    <div class="cell" data-index="4"></div>
+    <div class="cell" data-index="5"></div>
+    <div class="cell" data-index="6"></div>
+    <div class="cell" data-index="7"></div>
+    <div class="cell" data-index="8"></div>
+  </div>
+
+</div>
+
+<script>
+const board=Array(9).fill(null);
+const cells=document.querySelectorAll('.cell');
+const message=document.getElementById('message');
+const resetBtn=document.getElementById('reset-btn');
+let gameOver=false;
+
+const winCombos=[
+[0,1,2],[3,4,5],[6,7,8],
+[0,3,6],[1,4,7],[2,5,8],
+[0,4,8],[2,4,6]
+];
+
+function checkWinner(){
+for(const combo of winCombos){
+const[a,b,c]=combo;
+if(board[a]&&board[a]===board[b]&&board[a]===board[c]) return board[a];
+}
+if(board.every(v=>v)) return 'Tie';
+return null;
+}
+
+function setBoardDisabled(d){
+cells.forEach(c=>c.style.pointerEvents=d?'none':'auto');
+}
+
+function findBestMove(sym){
+for(const combo of winCombos){
+const[a,b,c]=combo;
+const vals=[board[a],board[b],board[c]];
+if(vals.filter(v=>v===sym).length===2 && vals.includes(null))
+return combo[vals.indexOf(null)];
+}
+return null;
+}
+
+function botMove(){
+if(gameOver) return;
+
+message.textContent="Bot is thinking...";
+setBoardDisabled(true);
+
+setTimeout(()=>{
+const empty=board.map((v,i)=>v?null:i).filter(v=>v!==null);
+if(!empty.length) return;
+
+let move=findBestMove('O');
+if(move===null) move=findBestMove('X');
+if(move===null) move=empty[Math.floor(Math.random()*empty.length)];
+
+board[move]='O';
+const cell=cells[move];
+cell.textContent='O';
+cell.classList.add('xo-animate');
+setTimeout(()=>cell.classList.remove('xo-animate'),300);
+
+message.textContent="";
+setBoardDisabled(false);
+
+let winner=checkWinner();
+if(winner) endGame(winner);
+
+},600);
+}
+
+function endGame(w){
+gameOver=true;
+setBoardDisabled(true);
+
+if(w==='Tie'){
+message.textContent="It's a Tie!";
+tie++;
+}
+else if(w==='X'){
+message.textContent="You Win!";
+you++;
+}
+else{
+message.textContent="Bot Wins!";
+bot++;
+}
+
+updateScore();
+}
+
+
+cells.forEach(cell=>{
+cell.addEventListener('click',()=>{
+const idx=cell.dataset.index;
+if(board[idx]||gameOver) return;
+
+board[idx]='X';
+cell.textContent='X';
+cell.classList.add('xo-animate');
+setTimeout(()=>cell.classList.remove('xo-animate'),300);
+
+let winner=checkWinner();
+if(winner){ endGame(winner); return;}
+
+botMove();
+});
+});
+
+resetBtn.onclick=()=>{
+board.fill(null);
+cells.forEach(c=>c.textContent='');
+message.textContent='';
+gameOver=false;
+setBoardDisabled(false);
+};
+
+let you=0, bot=0, tie=0;
+
+const youScore=document.getElementById('youScore');
+const botScore=document.getElementById('botScore');
+const tieScore=document.getElementById('tieScore');
+
+function updateScore(){
+  youScore.textContent=you;
+  botScore.textContent=bot;
+  tieScore.textContent=tie;
+}
+
+</script>
+
+</body>
+</html>

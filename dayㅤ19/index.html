@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>tic tac toe</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body, html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+    #title {
+    position: relative;
+    z-index: 10;
+    font-size: 60px;
+    font-weight: bold;
+    color: rgb(255, 217, 0);
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    margin-bottom: 50px;
+  }
+
+  #bg-container {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('modelsa/stsbg.jpg') no-repeat center center;
+    background-size: cover;
+    filter: blur(5px);
+    transition: transform 0.1s ease-out;
+    will-change: transform;
+  }
+
+  #play-button {
+    position: relative;
+    z-index: 10;
+    padding: 25px 60px;
+    border-radius: 12px;
+    background: rgba(255, 208, 0, 0.171);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffc400;
+    font-size: 28px;
+    font-weight: bold;
+    transition: transform 0.6s ease, box-shadow 0.3s ease;
+    border: #ffc400 solid 7px;
+    box-shadow: #ffc400 0 0 10px;
+  }
+
+  #play-button:hover {
+    transform: rotate(5deg) scale3d(1.1, 1.1, 1.1);
+    border: #ffc400 solid 8px;
+    box-shadow: #ffc400 0 0 20px;
+  }
+</style>
+</head>
+<body>
+<div id="bg-container"></div>
+<div style="display: flex; flex-direction: column; align-items: center;">
+  <div id="title">tic tac toe...</div>
+<div id="play-button" class="btn-play" onclick="window.location.href='selector.html'">PLAY</div>
+</div>
+
+<script>
+  const bg = document.getElementById('bg-container');
+
+  document.addEventListener('mousemove', (e) => {
+    const x = (e.clientX / window.innerWidth - 0.5) * 20;
+    const y = (e.clientY / window.innerHeight - 0.5) * 20;
+    bg.style.transform = `translate(${x}px, ${y}px) scale(1.05)`;
+  });
+</script>
+
+</body>
+</html>

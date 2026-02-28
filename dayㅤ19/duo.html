@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Tic Tac Toe - duo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body, html {
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            background: #f0e2d0 url("modelsa/duoplay.png") no-repeat center center;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            perspective: 1200px; 
+        }
+
+        #back-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            background: #ffd400;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            pointer-events: auto;
+        }
+        #back-btn:active { transform: scale(0.95); }
+
+        #paper-layout {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            transform: rotateX(35deg) translateY(-2vh);
+            transform-style: preserve-3d;
+        }
+
+        #scoreboard {
+            font-family: 'Arial', sans-serif;
+            font-size: 1.8vh;
+            color: #444;
+            margin-bottom: 5px;
+        }
+
+        #message {
+            height: 4vh;
+            font-family: 'Indie Flower', cursive;
+            font-size: 3vh;
+            font-weight: bold;
+            color: #d63031;
+        }
+
+        #board {
+            display: grid;
+            grid-template-columns: repeat(3, 15vh);
+            grid-template-rows: repeat(3, 15vh);
+            margin-bottom: 20px;
+        }
+
+        .cell {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Indie Flower', cursive;
+            font-size: 10vh;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        /* GRID LINES */
+        .cell:nth-child(3n-2), .cell:nth-child(3n-1) {
+            border-right: 0.6vh solid #4b4b4b;
+        }
+        .cell:nth-child(-n+6) {
+            border-bottom: 0.6vh solid #4b4b4b;
+        }
+
+        /* ERASE BUTTON */
+        #erase-btn {
+            padding: 1.5vh 5vh;
+            font-size: 2vh;
+            font-weight: bold;
+            border: 2px solid #333;
+            border-radius: 8px;
+            background: #fff;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            position: relative;
+            z-index: 2000;
+            transform: rotateX(-15deg);
+        }
+    </style>
+</head>
+<body>
+
+<button id="back-btn" onclick="window.location.href=document.referrer || '/'">← Back</button>
+
+<div id="paper-layout">
+    
+    <div id="scoreboard">
+        X: <span id="xS">0</span> | O: <span id="oS">0</span> | Tie: <span id="tS">0</span>
+    </div>
+
+    <div id="message">X's Turn</div>
+
+    <div id="board">
+        <div class="cell" data-i="0"></div>
+        <div class="cell" data-i="1"></div>
+        <div class="cell" data-i="2"></div>
+        <div class="cell" data-i="3"></div>
+        <div class="cell" data-i="4"></div>
+        <div class="cell" data-i="5"></div>
+        <div class="cell" data-i="6"></div>
+        <div class="cell" data-i="7"></div>
+        <div class="cell" data-i="8"></div>
+    </div>
+
+    <button id="erase-btn">erase</button>
+</div>
+
+<script>
+    const cells = document.querySelectorAll(".cell");
+    const msg = document.getElementById("message");
+    const xScore = document.getElementById("xS"), 
+          oScore = document.getElementById("oS"), 
+          tScore = document.getElementById("tS");
+    const eraseBtn = document.getElementById("erase-btn");
+
+    let board = Array(9).fill(null);
+    let turn = "X";
+    let active = true;
+    let scores = { X: 0, O: 0, Tie: 0 };
+
+    const wins = [
+        [0,1,2], [3,4,5], [6,7,8], 
+        [0,3,6], [1,4,7], [2,5,8], 
+        [0,4,8], [2,4,6]           
+    ];
+
+    cells.forEach(cell => {
+        cell.addEventListener('click', () => {
+            const i = cell.dataset.i;
+            if (board[i] || !active) return;
+
+            board[i] = turn;
+            cell.textContent = turn;
+            cell.style.color = turn === "X" ? "#2d3436" : "#0984e3";
+
+            if (checkWin()) return;
+            if (checkTie()) return;
+
+            turn = turn === "X" ? "O" : "X";
+            msg.textContent = turn + "'s Turn";
+        });
+    });
+
+    function checkWin() {
+        for (let condition of wins) {
+            const [a, b, c] = condition;
+            if (board[a] && board[a] === board[b] && board[a] === board[c]) {
+                msg.textContent = turn + " Wins!";
+                scores[turn]++;
+                updateScores();
+                active = false;
+                return true;
+            }
+        }
+        return false;
+    }
+
+    function checkTie() {
+        if (!board.includes(null)) {
+            msg.textContent = "It's a Tie!";
+            scores.Tie++;
+            updateScores();
+            active = false;
+            return true;
+        }
+        return false;
+    }
+
+    function updateScores() {
+        xScore.textContent = scores.X;
+        oScore.textContent = scores.O;
+        tScore.textContent = scores.Tie;
+    }
+
+    eraseBtn.addEventListener('click', () => {
+        board.fill(null);
+        cells.forEach(c => c.textContent = "");
+        msg.textContent = "X's Turn";
+        active = true;
+        turn = "X";
+    });
+</script>
+</body>
+</html>

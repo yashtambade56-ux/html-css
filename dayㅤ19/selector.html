@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Select Game Mode</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body, html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    background: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Background */
+  #bg-container {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('modelsa/lobby.jpg') no-repeat center center;
+    background-size: cover;
+    filter: blur(5px);
+    transition: transform 0.1s ease-out;
+  }
+
+  /* Back button */
+  #back-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 20;
+    padding: 12px 20px;
+    background: yellow;
+    color: black;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+    box-shadow: 0 0 10px #ffc400;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  #back-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px #ffc400;
+  }
+
+  /* Title */
+  #title {
+    position: relative;
+    z-index: 10;
+    font-size: 60px;
+    font-weight: bold;
+    color: yellow;
+    text-shadow: 0 0 20px rgba(255,255,0,0.7);
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+  /* Container for buttons */
+  #mode-container {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    gap: 100px; /* spacing between Bot and Friend */
+    margin-bottom: 40px;
+  }
+
+  /* GIF buttons 1 */
+  .mode-btn1 {
+    cursor: pointer;
+  }
+
+  .mode-btn1 video {
+    width: 250px;
+    height: 250px;
+    display: block;
+  }
+
+  .mode-btn1:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+  }
+
+  /* GIF buttons 2 */
+
+  .mode-btn2 {
+    cursor: pointer;
+  }
+
+  .mode-btn2 img {
+    width: 250px;
+    height: 250px;
+    display: block;
+  }
+
+  .mode-btn2:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+  }
+</style>
+</head>
+<body>
+
+<div id="bg-container"></div>
+
+<!-- Back button -->
+<div id="back-btn" onclick="window.location.href='index.html'">Back</div>
+
+<div id="title">Select Game Mode...</div>
+
+<!-- Mode buttons -->
+<div id="mode-container">
+  <!-- Bot GIF button -->
+  <div class="mode-btn1" id="bot-btn" onclick="window.location.href='botgame.html'">
+    <img src="modelsa/robotpng.gif" alt="Bot Mode" style="width: 250px; height: 250px;">
+  </div>
+
+  <!-- Friend GIF button -->
+  <div class="mode-btn2" id="friend-btn" onclick="window.location.href='duo.html'">
+    <img src="modelsa/frandpng.gif" alt="Friend Mode" style="width: 250px; height: 250px;">
+  </div>
+</div>
+
+<script>
+  const bg = document.getElementById('bg-container');
+
+  // Parallax background
+  document.addEventListener('mousemove', (e) => {
+    const x = (e.clientX / window.innerWidth - 0.5) * 20;
+    const y = (e.clientY / window.innerHeight - 0.5) * 20;
+    bg.style.transform = `translate(${x}px, ${y}px) scale(1.05)`;
+  });
+</script>
+
+</body>
+</html>
