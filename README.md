@@ -63,7 +63,32 @@ Dashboard UI – Responsive HTML & CSS Layout
 Day 16                
 Frontend & Creative Projects - 20 task                                   
 live Demo -                                              
-https://yashhh710.github.io/20-tasks/                             
+https://yashhh710.github.io/20-tasks/    
+
+Day 17          
+Hidden HTML5 Tags –           
+Exploring native semantic elements for better accessibility and functionality.            
+
+Day 18                         
+Modern CSS Post-2025             
+Implementing 20 cuttingedge                  
+properties for high                   
+performance layouts and animations.               
+
+Day 19                   
+Tic-Tac-Toe Game                   
+Building a classic interactive experience with a focus on UI/UX and game logic.           
+https://yashhh710.github.io/tic-tac-toe-html-css/index.html                  
+
+Day 20              
+Porsche Landing Page         
+High-performance UI design focusing on luxury aesthetics and smooth interactions.
+https://yashhh710.github.io/porshe/                  
+
+Day 21            
+Frontend Mastery Hub       
+A centralized dashboard showcasing a collection of advanced web development projects.
+https://yashhh710.github.io/Frontend-Master/             
 
 ---
 
