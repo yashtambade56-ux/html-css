@@ -109,11 +109,11 @@ The project focuses on building a clean and responsive welcome page with basic l
 
 ---
 
-Final Project
+Final Project                                       
 This project is a complete frontend application built using HTML, CSS, and JavaScript, combining all core web development concepts into a single responsive and functional project.
-
-Repo: https://github.com/Yashhh710/Html-csss-mini-project
-Live: https://yashhh710.github.io/Html-csss-mini-project/
+                    
+Repo: https://github.com/Yashhh710/Html-csss-mini-project                     
+Live: https://yashhh710.github.io/Html-csss-mini-project/                               
 
 
 ---
