@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>SUMN – Finance Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">SUMN</div>
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../todo.html">Tasks</a>
+        <a href="../templates.html" class="active">Templates</a>
+        <a href="../stats.html">Stats</a>
+        <a href="../settings.html">Settings</a>
+    </nav>
+</header>
+
+<main class="page">
+    <h1>Finance Template</h1>
+    <p>Manage budgets and finances responsibly.</p>
+
+    <div class="template-card">
+        <h3>Suggested Tasks</h3>
+        <ul class="task-list">
+            <li>Record expenses</li>
+            <li>Pay bills</li>
+            <li>Review budget</li>
+            <li>Transfer savings</li>
+            <li>Monthly summary</li>
+        </ul>
+
+        <br />
+
+        <a href="../todo.html"
+           onclick="localStorage.setItem('prefill',
+             JSON.stringify([
+               'Record expenses',
+               'Pay pending bills',
+               'Review monthly budget',
+               'Transfer savings',
+               'Check account balances'
+             ])
+           )"
+           class="btn primary">
+           Use this template
+        </a>
+    </div>
+</main>
+
+<footer class="footer">
+    <p>Control money before it controls you.</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SUMN – Tasks</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="app.js" defer></script>
+</head>
+
+<body>
+<div class="app-layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="brand-logo">
+      <div class="brand-name">
+        <span class="brand-s">S</span>UMN
+      </div>
+      <div class="brand-tagline">[ sum of your day ]</div>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a href="index.html">🏠 Home</a>
+      <a href="todo.html" class="active">📝 Tasks</a>
+      <a href="stats.html">📊 Stats</a>
+      <a href="settings.html">⚙ Settings</a>
+    </nav>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="app-main">
+    <section class="card inbox-card">
+
+      <h1 class="page-title">Inbox</h1>
+      <p class="page-subtitle">Add and manage all your tasks here.</p>
+
+      <!-- CONTROLS -->
+      <div class="task-controls">
+
+        <input
+          type="text"
+          id="taskInput"
+          placeholder="What needs to be done?"
+        />
+
+        <input
+          type="datetime-local"
+          id="reminderInput"
+        />
+
+        <select id="repeatInput">
+          <option value="none">No repeat</option>
+          <option value="daily">Daily</option>
+          <option value="weekly">Weekly</option>
+        </select>
+
+        <button type="button" class="btn primary" onclick="addTask()">
+          Add Task
+        </button>
+      </div>
+
+      <!-- FILTERS -->
+      <div class="task-filters">
+        <button class="active" onclick="filterTasks('all')">All</button>
+        <button onclick="filterTasks('active')">Active</button>
+        <button onclick="filterTasks('completed')">Completed</button>
+      </div>
+
+      <!-- TASK LIST (JS CONTROLS THIS) -->
+      <ul class="task-list" id="taskList"></ul>
+
+    </section>
+  </main>
+
+</div>
+</body>
+</html>
+
+
+
+

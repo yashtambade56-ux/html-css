@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>SUMN – Student Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">SUMN</div>
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../todo.html">Tasks</a>
+        <a href="../templates.html" class="active">Templates</a>
+        <a href="../stats.html">Stats</a>
+        <a href="../settings.html">Settings</a>
+    </nav>
+</header>
+
+<main class="page">
+    <h1>Student Template</h1>
+    <p>Organize your academic workload.</p>
+
+    <div class="template-card">
+        <h3>Suggested Tasks</h3>
+        <ul class="task-list">
+            <li>Attend lectures</li>
+            <li>Complete assignments</li>
+            <li>Revise notes</li>
+            <li>Prepare for exams</li>
+            <li>Project work</li>
+        </ul>
+
+        <br />
+
+        <a href="../todo.html"
+           onclick="localStorage.setItem('prefill',
+             JSON.stringify([
+               'Attend lectures',
+               'Complete assignments',
+               'Revise notes',
+               'Prepare for exams',
+               'Project work'
+             ])
+           )"
+           class="btn primary">
+           Use this template
+        </a>
+    </div>
+</main>
+
+<footer class="footer">
+    <p>Study smart, not hard.</p>
+</footer>
+
+</body>
+</html>
+

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>SUMN – Daily Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="logo">SUMN</div>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../todo.html">Tasks</a>
+            <a href="../templates.html" class="active">Templates</a>
+            <a href="../stats.html">Stats</a>
+            <a href="../settings.html">Settings</a>
+        </nav>
+    </header>
+
+    <!-- PAGE CONTENT -->
+    <main class="page">
+        <h1>Daily Template</h1>
+        <p>
+            Use this template to plan your daily routine and habits.
+        </p>
+
+        <div class="template-card">
+            <h3>Suggested Tasks</h3>
+            <ul class="task-list">
+                <li>Morning routine</li>
+                <li>Classes / Work</li>
+                <li>Exercise</li>
+                <li>Revision / Reading</li>
+                <li>Plan tomorrow</li>
+            </ul>
+
+            <br />
+
+            <!-- MERGED PREFILL BUTTON -->
+            <a href="../todo.html"
+               onclick="localStorage.setItem(
+                 'prefill',
+                 JSON.stringify([
+                   'Morning routine',
+                   'Work / Classes',
+                   'Exercise',
+                   'Revision / Reading',
+                   'Plan tomorrow'
+                 ])
+               )"
+               class="btn primary">
+               Use this template
+            </a>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>Consistency builds discipline.</p>
+    </footer>
+
+</body>
+</html>
+

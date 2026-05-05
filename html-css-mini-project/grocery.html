@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>SUMN – Grocery Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">SUMN</div>
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../todo.html">Tasks</a>
+        <a href="../templates.html" class="active">Templates</a>
+        <a href="../stats.html">Stats</a>
+        <a href="../settings.html">Settings</a>
+    </nav>
+</header>
+
+<main class="page">
+    <h1>Grocery Template</h1>
+    <p>Plan your shopping and essentials.</p>
+
+    <div class="template-card">
+        <h3>Suggested Items</h3>
+        <ul class="task-list">
+            <li>Milk</li>
+            <li>Vegetables</li>
+            <li>Fruits</li>
+            <li>Snacks</li>
+            <li>Check pantry</li>
+        </ul>
+
+        <br />
+
+        <a href="../todo.html"
+           onclick="localStorage.setItem('prefill',
+             JSON.stringify([
+               'Buy milk',
+               'Buy vegetables',
+               'Buy fruits',
+               'Buy snacks',
+               'Check pantry items'
+             ])
+           )"
+           class="btn primary">
+           Use this template
+        </a>
+    </div>
+</main>
+
+<footer class="footer">
+    <p>Shop smart, waste less.</p>
+</footer>
+
+</body>
+</html>
+

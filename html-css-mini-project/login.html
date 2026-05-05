@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login – SUMN</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+<div class="app-layout">
+
+  <main class="app-main">
+    <section class="page" style="max-width:520px;">
+
+      <h1>Login to SUMN</h1>
+      <p class="text-muted">
+        Enter your email and password to continue
+      </p>
+
+      <div class="template-card">
+
+        <form onsubmit="login(event)" style="display:flex; flex-direction:column; gap:18px;">
+
+          <div>
+            <label class="text-muted">Email</label>
+            <input
+              type="email"
+              id="email"
+              required
+              placeholder="you@example.com"
+              style="width:100%; margin-top:6px;"
+            />
+          </div>
+
+          <div>
+            <label class="text-muted">Password</label>
+            <input
+              type="password"
+              id="password"
+              required
+              placeholder="••••••••"
+              style="width:100%; margin-top:6px;"
+            />
+          </div>
+
+          <button type="submit" class="btn primary">
+            Login
+          </button>
+
+        </form>
+
+        <p class="text-muted" style="margin-top:18px; font-size:13px;">
+          * Demo login (no real authentication used)
+        </p>
+
+      </div>
+
+    </section>
+  </main>
+
+</div>
+
+<script>
+function login(e) {
+  e.preventDefault();
+
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+
+  if (!email || !password) {
+    alert("Please enter email and password");
+    return;
+  }
+
+  // Demo auth (frontend-only)
+  localStorage.setItem("loggedIn", "true");
+  localStorage.setItem("userEmail", email);
+
+  window.location.href = "welcome.html";
+}
+</script>
+
+</body>
+</html>
+
+
+

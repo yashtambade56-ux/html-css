@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>SUMN – Fitness Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">SUMN</div>
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../todo.html">Tasks</a>
+        <a href="../templates.html" class="active">Templates</a>
+        <a href="../stats.html">Stats</a>
+        <a href="../settings.html">Settings</a>
+    </nav>
+</header>
+
+<main class="page">
+    <h1>Fitness Template</h1>
+    <p>Stay consistent with your health goals.</p>
+
+    <div class="template-card">
+        <h3>Suggested Tasks</h3>
+        <ul class="task-list">
+            <li>Warm-up</li>
+            <li>Workout</li>
+            <li>Stretching</li>
+            <li>Hydration</li>
+            <li>Track progress</li>
+        </ul>
+
+        <br />
+
+        <a href="../todo.html"
+           onclick="localStorage.setItem('prefill',
+             JSON.stringify([
+               'Warm-up',
+               'Workout session',
+               'Stretching',
+               'Hydration',
+               'Track progress'
+             ])
+           )"
+           class="btn primary">
+           Use this template
+        </a>
+    </div>
+</main>
+
+<footer class="footer">
+    <p>Your body is an investment.</p>
+</footer>
+
+</body>
+</html>
+

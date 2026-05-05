@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SUMN – Home</title>
+
+<link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<div class="app-layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="brand-logo">
+      <div class="brand-name">SUMN</div>
+      <div class="brand-tagline">[ sum of your day ]</div>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a href="index.html" class="active">🏠 Home</a>
+      <a href="todo.html">📝 Tasks</a>
+      <a href="stats.html">📊 Stats</a>
+      <a href="settings.html">⚙ Settings</a>
+    </nav>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="app-main">
+    <section class="home-page hero-layout">
+
+      <!-- LEFT SIDE -->
+      <div class="hero-left">
+        <h1 class="brand-title">
+          <span class="brand-s">S</span>UMN
+        </h1>
+
+        <p class="tagline">[ sum of your day ]</p>
+
+        <!-- ✅ FIXED LOGIN FLOW -->
+        <a href="login.html" class="btn primary-btn">
+          Login / Get Started
+        </a>
+      </div>
+
+      <!-- RIGHT SIDE – S WAVES -->
+      <div class="hero-right">
+        <div class="s-wave-container">
+          <div class="s-wave" style="--z: 0px;">S</div>
+          <div class="s-wave" style="--z: -20px;">S</div>
+          <div class="s-wave" style="--z: -40px;">S</div>
+          <div class="s-wave" style="--z: -60px;">S</div>
+          <div class="s-wave" style="--z: -80px;">S</div>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+</div>
+
+<script>
+const waves = document.querySelectorAll('.s-wave');
+const container = document.querySelector('.s-wave-container');
+const homeLink = document.querySelector('.sidebar-nav a.active');
+
+let viscosity = 0.06;
+let magnetStrength = 14;
+let breakupThreshold = 18;
+
+let tx = 0, ty = 0;
+let cx = 0, cy = 0;
+let px = 0, py = 0;
+
+document.addEventListener('mousemove', (e) => {
+  tx = (e.clientX / window.innerWidth - 0.5) * 30;
+  ty = (e.clientY / window.innerHeight - 0.5) * -30;
+});
+
+function animate() {
+  cx += (tx - cx) * viscosity;
+  cy += (ty - cy) * viscosity;
+
+  const speed = Math.hypot(cx - px, cy - py);
+  px = cx;
+  py = cy;
+
+  waves.forEach((wave, i) => {
+    const depth = i * 0.55;
+    const mx = cx * (magnetStrength * 0.08);
+    const my = cy * (magnetStrength * 0.08);
+
+    if (i === 0) {
+      wave.style.setProperty('--rx', `${cy}deg`);
+      wave.style.setProperty('--ry', `${cx}deg`);
+      wave.style.setProperty('--mx', `${mx}px`);
+      wave.style.setProperty('--my', `${my}px`);
+      wave.style.setProperty('--scale', '1');
+    } else {
+      wave.style.setProperty('--rx', `${-cy * depth}deg`);
+      wave.style.setProperty('--ry', `${-cx * depth}deg`);
+      wave.style.setProperty('--mx', `${-mx * depth}px`);
+      wave.style.setProperty('--my', `${-my * depth}px`);
+      wave.style.setProperty('--scale', `${1 + depth * 0.02}`);
+    }
+
+    if (speed > breakupThreshold && i !== 0) {
+      wave.classList.add('break');
+    } else {
+      wave.classList.remove('break');
+    }
+  });
+
+  requestAnimationFrame(animate);
+}
+
+animate();
+
+if (homeLink && container) {
+  homeLink.addEventListener('click', () => {
+    container.classList.remove('pulse');
+    void container.offsetWidth;
+    container.classList.add('pulse');
+  });
+}
+</script>
+
+</body>
+</html>
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+

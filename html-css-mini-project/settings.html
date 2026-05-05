@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>SUMN – Settings</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <div class="app-layout">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">SUMN</div>
+            <nav class="sidebar-nav">
+                <a href="index.html">🏠 Home</a>
+                <a href="todo.html">📝 Tasks</a>
+                <a href="templates.html">📂 Templates</a>
+                <a href="stats.html">📊 Stats</a>
+                <a href="settings.html" class="active">⚙ Settings</a>
+            </nav>
+        </aside>
+
+        <!-- MAIN -->
+        <div class="app-main">
+
+            <section class="page">
+                <h1>Settings</h1>
+                <p class="text-muted">
+                    Customize your experience.
+                </p>
+
+                <div class="settings-group">
+
+                    <div class="setting-item">
+                        <h4>Appearance</h4>
+                        <p class="text-muted">
+                            Switch between light and dark mode.
+                        </p>
+
+                        <button class="btn toggle-theme">
+                            🌙 Toggle Theme
+                        </button>
+                    </div>
+
+                </div>
+
+
+                <div class="templates-grid">
+                    <div class="template-card">
+                        <h3>🌗 Theme</h3>
+                        <p>Switch between light and dark mode.</p>
+                        <button class="btn secondary" onclick="toggleTheme()">
+                            Toggle Theme
+                        </button>
+                    </div>
+
+                    <div class="template-card">
+                        <h3>🗑 Data</h3>
+                        <p>Clear all tasks and start fresh.</p>
+                        <button class="btn primary" onclick="clearTasks()">
+                            Clear All Tasks
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

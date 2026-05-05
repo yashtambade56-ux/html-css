@@ -1,0 +1,1433 @@
+/* =========================
+   GOOGLE FONTS
+========================= */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Space+Grotesk:wght@500;700&display=swap');
+
+/* =========================
+   RESET + VARIABLES
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --accent: #38bdf8;
+    --bg-main: #020617;
+    --bg-card: #020617;
+    --bg-soft: #0f172a;
+    --text-main: #e5e7eb;
+    --text-muted: #94a3b8;
+    --border: #1e293b;
+    --radius: 18px;
+}
+
+/* =========================
+   BASE
+========================= */
+body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background: var(--bg-main);
+    color: var(--text-main);
+    min-height: 100vh;
+}
+
+h1 {
+    font-size: 42px;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.text-muted {
+    color: var(--text-muted);
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* =========================
+   APP LAYOUT
+========================= */
+.app-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+.sidebar {
+    width: 260px;
+    padding: 28px 18px;
+    border-right: 1px solid var(--border);
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
+.app-main {
+    flex: 1;
+    padding: 56px 64px;
+}
+
+/* =========================
+   PAGE WRAPPER (GLOBAL FIX)
+========================= */
+.page {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 56px 56px 64px;
+    border-radius: 26px;
+    background: linear-gradient(180deg, var(--bg-card), var(--bg-soft));
+    border: 1px solid var(--border);
+}
+
+/* =========================
+   SECTION SPACING (KEY FIX)
+========================= */
+.page > * + * {
+    margin-top: 56px;
+}
+
+/* =========================
+   TEMPLATE / STATS / SETTINGS CONTAINERS
+========================= */
+.template-card,
+.stats-card,
+.settings-card {
+    padding: 42px 44px;
+    border-radius: 22px;
+    background: linear-gradient(
+        180deg,
+        rgba(15,23,42,0.96),
+        rgba(2,6,23,0.98)
+    );
+    border: 1px solid rgba(255,255,255,0.12);
+}
+
+/* =========================
+   TEMPLATE LIST (BIG FIX)
+========================= */
+.template-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 28px;
+    margin-top: 36px;
+}
+
+.template-item {
+    padding: 28px 32px;
+    border-radius: 18px;
+    background: linear-gradient(
+        180deg,
+        rgba(255,255,255,0.06),
+        rgba(255,255,255,0.02)
+    );
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.template-item strong {
+    font-size: 18px;
+}
+
+.template-item .open-link {
+    margin-top: 6px;
+    font-weight: 600;
+    color: var(--accent);
+}
+
+/* =========================
+   STATS PAGE SPACING
+========================= */
+.stats-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 26px;
+    margin-top: 40px;
+}
+
+.stat-box {
+    padding: 28px 32px;
+    border-radius: 18px;
+    background: linear-gradient(
+        180deg,
+        rgba(255,255,255,0.06),
+        rgba(255,255,255,0.02)
+    );
+}
+
+.stat-box strong {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+
+.stat-box span {
+    font-size: 26px;
+    font-weight: 800;
+    color: var(--accent);
+}
+
+/* =========================
+   SETTINGS PAGE (MAJOR CLEANUP)
+========================= */
+.settings-group {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    margin-top: 36px;
+}
+
+.setting-item {
+    padding: 30px 34px;
+    border-radius: 18px;
+    background: linear-gradient(
+        180deg,
+        rgba(255,255,255,0.06),
+        rgba(255,255,255,0.02)
+    );
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.setting-item h4 {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.btn {
+    padding: 12px 26px;
+    border-radius: 999px;
+    font-weight: 600;
+    width: fit-content;
+}
+
+.btn.primary {
+    background: var(--accent);
+    color: #020617;
+}
+
+/* =========================
+   RESPONSIVE POLISH
+========================= */
+@media (max-width: 900px) {
+    .app-main {
+        padding: 32px 24px;
+    }
+
+    .page {
+        padding: 36px 28px;
+    }
+}
+/* =========================
+   SAFE SPACING PATCH
+   (Does NOT affect layout)
+========================= */
+
+/* ---------- PAGE HEADINGS ---------- */
+.page h1 {
+    margin-bottom: 18px;
+}
+
+.page > p,
+.page > .text-muted {
+    margin-bottom: 32px;
+}
+
+/* ---------- TEMPLATES PAGE ---------- */
+.templates-page .template-card,
+.template-card {
+    margin-bottom: 28px; /* space between cards */
+}
+
+.template-card h3 {
+    margin-bottom: 10px;
+}
+
+.template-card p {
+    margin-bottom: 14px;
+    line-height: 1.6;
+}
+
+.template-card a {
+    display: inline-block;
+    margin-top: 6px;
+}
+
+/* ---------- STATS PAGE ---------- */
+.stats-page .stat-card {
+    margin-bottom: 22px;
+    padding: 28px;
+}
+
+.stats-page .stat-card h3 {
+    margin-bottom: 8px;
+}
+
+.stats-page .stat-card p {
+    margin-top: 6px;
+}
+
+/* ---------- SETTINGS PAGE ---------- */
+.settings-page .setting-section {
+    margin-bottom: 32px;
+    padding: 28px;
+}
+
+.setting-section h3 {
+    margin-bottom: 10px;
+}
+
+.setting-section p {
+    margin-bottom: 16px;
+    line-height: 1.6;
+}
+
+.setting-section button {
+    margin-top: 10px;
+}
+
+/* ---------- GENERAL CARD BREATHING ---------- */
+.template-card,
+.stat-card,
+.setting-section {
+    border-radius: 20px;
+}
+/* =========================
+   HOME PAGE HERO FIX (SAFE)
+========================= */
+
+.home-page {
+    padding-top: 80px; /* pushes content down */
+}
+
+.home-page h1 {
+    margin-bottom: 14px;
+}
+
+.home-page .text-muted {
+    margin-bottom: 22px;
+    line-height: 1.6;
+}
+
+.home-page .btn {
+    margin-top: 6px;
+}
+/* SUMN branding */
+.brand-title {
+    font-size: 48px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+}
+
+.brand-s {
+    color: #ef4444; /* premium red */
+}
+/* =========================
+   HOME PAGE – PREMIUM SPACING
+========================= */
+
+.home-page {
+    padding-top: 120px; /* pushes content DOWN */
+    padding-left: 40px; /* breathing room from sidebar */
+}
+
+.home-page h1 {
+    margin-bottom: 20px;
+}
+
+.home-page .text-muted {
+    margin-bottom: 28px;
+    line-height: 1.7;
+}
+
+.home-page .btn {
+    margin-top: 10px;
+}
+/* =========================
+   SIDEBAR – SPACING & POLISH
+========================= */
+
+.sidebar {
+    padding-top: 36px;
+}
+
+.brand-logo {
+    margin-bottom: 48px;
+}
+
+.sidebar-nav {
+    gap: 14px; /* more air between items */
+}
+
+.sidebar-nav a {
+    padding: 14px 18px;
+    font-size: 15px;
+}
+/* =========================
+   HOME – PREMIUM SPACING
+========================= */
+
+.home-page {
+    padding-left: 60px;        /* distance from sidebar */
+    padding-top: 140px;        /* pushes content DOWN */
+}
+
+.home-hero {
+    max-width: 520px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* SUMN title */
+.brand-title {
+    font-size: 52px;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    margin-bottom: 22px;       /* space BELOW title */
+}
+
+.brand-s {
+    color: #ef4444;            /* red S */
+}
+
+/* tagline */
+.home-tagline {
+    font-size: 16px;
+    opacity: 0.7;
+    margin-bottom: 42px;       /* BIG breathing gap */
+    line-height: 1.8;
+}
+
+/* CTA button */
+.primary-btn {
+    padding: 14px 32px;
+    font-size: 15px;
+    border-radius: 999px;
+}
+/* =========================
+   SIDEBAR – HOVER & ACTIVE
+   ========================= */
+
+.sidebar-nav a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 10px 14px;
+    margin: 4px 6px;
+
+    border-radius: 10px;
+    text-decoration: none;
+
+    color: #b9c2d0;
+    font-size: 14px;
+    font-weight: 500;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+/* Hover */
+.sidebar-nav a:hover {
+    background: rgba(88, 166, 255, 0.12);
+    color: #eaf1ff;
+    box-shadow: inset 0 0 0 1px rgba(88, 166, 255, 0.18);
+}
+
+/* Active (current page) */
+.sidebar-nav a.active {
+    background: linear-gradient(
+        90deg,
+        rgba(88, 166, 255, 0.35),
+        rgba(88, 166, 255, 0.12)
+    );
+    color: #ffffff;
+    box-shadow:
+        inset 3px 0 0 #58a6ff,
+        inset 0 0 0 1px rgba(88, 166, 255, 0.25);
+}
+/* =========================
+   HERO – SUBTLE ANIMATION
+   ========================= */
+
+.home-hero {
+    animation: heroFadeUp 0.8s ease-out forwards;
+}
+
+@keyframes heroFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* =========================
+   TASK INPUT BAR – PREMIUM
+   ========================= */
+
+/* Wrapper (safe even if you already have one) */
+.task-controls,
+.task-inputs {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 14px;
+    margin-top: 24px;
+    margin-bottom: 18px;
+}
+
+/* All inputs & selects */
+.task-controls input,
+.task-controls select,
+.task-inputs input,
+.task-inputs select {
+    height: 42px;
+    padding: 0 14px;
+
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 10px;
+
+    color: #eaf1ff;
+    font-size: 14px;
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+/* Placeholder */
+.task-controls input::placeholder {
+    color: rgba(234, 241, 255, 0.45);
+}
+
+/* Focus */
+.task-controls input:focus,
+.task-controls select:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.08);
+    border-color: #58a6ff;
+    box-shadow: 0 0 0 2px rgba(88, 166, 255, 0.25);
+}
+
+/* Date input icon fix */
+.task-controls input[type="date"],
+.task-controls input[type="datetime-local"] {
+    color-scheme: dark;
+}
+
+/* ADD BUTTON */
+.task-controls .btn,
+.task-controls button {
+    height: 42px;
+    padding: 0 26px;
+
+    background: linear-gradient(135deg, #58a6ff, #6fc3ff);
+    color: #ffffff;
+
+    border: none;
+    border-radius: 22px;
+    font-weight: 600;
+    font-size: 14px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 6px 18px rgba(88, 166, 255, 0.35);
+
+    transition:
+        transform 0.15s ease,
+        box-shadow 0.15s ease;
+}
+
+/* Button hover */
+.task-controls .btn:hover,
+.task-controls button:hover {
+    transform: translateY(-1px);
+    box-shadow:
+        0 10px 24px rgba(88, 166, 255, 0.45);
+}
+
+/* =========================
+   FILTER BUTTONS
+   ========================= */
+
+.task-filters,
+.task-controls .filters {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+/* Filter buttons */
+.task-filters button,
+.task-controls .filters button {
+    padding: 6px 14px;
+
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 8px;
+
+    font-size: 13px;
+    color: #c9d2e3;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+/* Hover */
+.task-filters button:hover {
+    background: rgba(88, 166, 255, 0.15);
+    border-color: rgba(88, 166, 255, 0.35);
+    color: #ffffff;
+}
+
+/* Active filter */
+.task-filters button.active {
+    background: rgba(88, 166, 255, 0.35);
+    border-color: #58a6ff;
+    color: #ffffff;
+}
+/* ===============================
+   TASK PAGE POLISH (SAFE)
+================================ */
+
+/* Page card */
+.inbox-card {
+  max-width: 760px;
+  margin: 80px auto;
+  padding: 48px;
+}
+
+/* Titles */
+.page-title {
+  font-size: 32px;
+  margin-bottom: 6px;
+}
+
+.page-subtitle {
+  color: #9aa6c0;
+  margin-bottom: 28px;
+}
+
+/* Controls */
+.task-controls {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.task-controls input,
+.task-controls select {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 10px;
+}
+
+/* Filters */
+.task-filters {
+  position: relative;
+  display: inline-flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.task-filters button {
+  background: none;
+  border: none;
+  color: #9aa6c0;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.task-filters button.active {
+  color: #fff;
+}
+
+.task-filters::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  height: 2px;
+  background: #58a6ff;
+  border-radius: 2px;
+  transform: translateX(var(--x, 0));
+  width: var(--w, 30px);
+  transition: all 0.3s ease;
+}
+
+/* Task animation */
+.task-item {
+  animation: taskIn 0.35s ease forwards;
+}
+
+@keyframes taskIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Empty state */
+.empty-state {
+  text-align: center;
+  margin-top: 60px;
+  color: #9aa6c0;
+}
+
+.empty-icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+/* ===== BRAND TITLE ===== */
+.brand-title {
+  font-size: 4.2rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: #eaeaf0;
+  position: relative;
+}
+
+.brand-s {
+  position: relative;
+  display: inline-block;
+  color: #ff4d4d;
+  cursor: pointer;
+}
+
+/* ❌ ENSURE NO BOX EXISTS */
+.brand-s,
+.brand-s::before,
+.brand-s::after {
+  background: none !important;
+  box-shadow: none !important;
+}
+
+/* ===== GLOW (TEXT ONLY) ===== */
+.brand-title:hover .brand-s {
+  text-shadow:
+    0 0 8px rgba(255, 80, 80, 0.6),
+    0 0 20px rgba(255, 80, 80, 0.45),
+    0 0 40px rgba(255, 60, 60, 0.35);
+}
+
+/* ===== LIGHTNING RAYS ===== */
+.brand-s::after {
+  content: "";
+  position: absolute;
+  inset: -35%;
+  border-radius: 50%;
+  opacity: 0;
+  background:
+    conic-gradient(
+      from 0deg,
+      rgba(255,80,80,0.0),
+      rgba(255,80,80,0.9),
+      rgba(255,80,80,0.0),
+      rgba(255,80,80,0.8),
+      rgba(255,80,80,0.0)
+    );
+  filter: blur(14px);
+  animation: spin-rays 1.8s linear infinite;
+  pointer-events: none;
+}
+
+.brand-title:hover .brand-s::after {
+  opacity: 1;
+}
+
+/* ===== MICRO SPARKS ===== */
+.sparks {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.sparks span {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: #ffb3b3;
+  border-radius: 50%;
+  opacity: 0;
+  animation: spark-pop 1.2s ease-out infinite;
+}
+
+.brand-title:hover .sparks span {
+  opacity: 1;
+}
+
+/* Random spark positions */
+.sparks span:nth-child(1) { top: -20%; left: 10%; animation-delay: 0s; }
+.sparks span:nth-child(2) { top: 30%; left: -15%; animation-delay: .2s; }
+.sparks span:nth-child(3) { top: 80%; left: 25%; animation-delay: .4s; }
+.sparks span:nth-child(4) { top: 50%; left: 110%; animation-delay: .6s; }
+.sparks span:nth-child(5) { top: -10%; left: 70%; animation-delay: .8s; }
+
+/* ===== LENS FLARE ===== */
+.flare {
+  position: absolute;
+  top: 50%;
+  left: -60%;
+  width: 140%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,200,200,0.9),
+    transparent
+  );
+  opacity: 0;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.brand-title:hover .flare {
+  opacity: 1;
+  animation: flare-sweep 1.4s ease-out infinite;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes spin-rays {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes spark-pop {
+  0% { transform: scale(0); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: scale(1.8); opacity: 0; }
+}
+
+@keyframes flare-sweep {
+  from { left: -60%; opacity: 0; }
+  50% { opacity: 1; }
+  to { left: 120%; opacity: 0; }
+}
+/* ================================
+   HERO LAYOUT
+================================ */
+.hero-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  height: 100%;
+  padding: 80px 100px;
+  gap: 60px;
+}
+
+/* LEFT SIDE */
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.brand-title {
+  font-size: 64px;
+  font-weight: 800;
+  letter-spacing: 4px;
+}
+
+.brand-s {
+  color: #ff4d4d;
+  text-shadow: 0 0 18px rgba(255, 77, 77, 0.45);
+}
+
+.tagline {
+  font-size: 16px;
+  color: #a8b0c4;
+  letter-spacing: 2px;
+}
+
+/* BUTTON */
+.primary-btn {
+  width: fit-content;
+  padding: 14px 28px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #45c9ff, #6ddcff);
+  color: #fff;
+  font-weight: 600;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.primary-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(80, 200, 255, 0.35);
+}
+
+/* ================================
+   RIGHT SIDE TUNNEL
+================================ */
+.hero-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1200px;
+}
+
+.tunnel {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  transform-style: preserve-3d;
+  animation: waveSpin 16s linear infinite;
+}
+
+.wave {
+  position: absolute;
+  inset: 0;
+  border-radius: 22px;
+  transform: translateZ(var(--z));
+  box-shadow: 0 0 60px rgba(54, 222, 255, 0.18);
+}
+
+.wave::before {
+  content: "";
+  position: absolute;
+  inset: -18px;
+  background: linear-gradient(
+    135deg,
+    transparent,
+    rgba(54, 222, 255, 0.35)
+  );
+  filter: blur(20px);
+  border-radius: inherit;
+}
+
+/* TUNNEL ROTATION */
+@keyframes waveSpin {
+  from {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  to {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+/* ================================
+   INDEX / HOME PAGE – FINAL FIX
+   (Scoped, zero side-effects)
+================================ */
+
+/* Prevent clashes */
+.home-page,
+.hero-layout {
+  position: relative;
+  isolation: isolate;
+}
+
+/* Grid spacing */
+.hero-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 80px;
+  padding: 120px 100px;
+}
+
+/* LEFT CONTENT */
+.hero-left {
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* SUMN TITLE */
+.hero-left .brand-title {
+  font-size: 64px;
+  letter-spacing: 0.14em;
+  margin-bottom: 8px;
+}
+
+/* TAGLINE */
+.hero-left .tagline,
+.home-tagline {
+  font-size: 15px;
+  letter-spacing: 0.14em;
+  opacity: 0.7;
+  margin-bottom: 36px;
+}
+
+/* CTA BUTTON */
+.hero-left .primary-btn {
+  margin-top: 8px;
+}
+
+/* RIGHT VISUAL AREA */
+.hero-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 380px;
+}
+
+/* TUNNEL SAFETY */
+.tunnel {
+  pointer-events: none;
+}
+
+/* MOBILE SAFE */
+@media (max-width: 900px) {
+  .hero-layout {
+    grid-template-columns: 1fr;
+    padding: 80px 40px;
+    gap: 60px;
+  }
+
+  .hero-right {
+    order: -1;
+  }
+}
+/* ================================
+   3D S WAVE LOGO (REPLACES TUNNEL)
+================================ */
+
+.s-wave-container {
+  position: relative;
+  width: 260px;
+  height: 260px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transform-style: preserve-3d;
+  animation: sSpin 16s linear infinite;
+  perspective: 1200px;
+}
+
+.s-wave {
+  position: absolute;
+
+  font-size: 180px;
+  font-weight: 900;
+  font-family: 'Space Grotesk', sans-serif;
+
+  color: #ff4d4d;
+  letter-spacing: -0.05em;
+
+  transform: translateZ(var(--z));
+  opacity: 0.12;
+
+  text-shadow:
+    0 0 18px rgba(255, 77, 77, 0.35),
+    0 0 40px rgba(255, 77, 77, 0.25);
+
+  filter: blur(0.4px);
+}
+
+/* Front layer sharper */
+.s-wave:first-child {
+  opacity: 1;
+  filter: none;
+  text-shadow:
+    0 0 22px rgba(255, 77, 77, 0.65),
+    0 0 60px rgba(255, 77, 77, 0.45);
+}
+
+/* Rotation animation */
+@keyframes sSpin {
+  from {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  to {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+
+/* Hover = energy surge */
+.hero-right:hover .s-wave {
+  text-shadow:
+    0 0 28px rgba(255, 90, 90, 0.9),
+    0 0 80px rgba(255, 60, 60, 0.7);
+}
+/* ================================
+   S WAVE – SIZE BOOST
+================================ */
+.s-wave {
+  font-size: 210px; /* WAS 180px → now bolder */
+}
+/* ================================
+   S WAVE – COLOR DEPTH SYNC
+================================ */
+
+/* Front S (core) */
+.s-wave:nth-child(1) {
+  color: #ff4d4d;
+}
+
+/* Depth waves */
+.s-wave:nth-child(2) {
+  color: rgba(255, 90, 90, 0.85);
+}
+
+.s-wave:nth-child(3) {
+  color: rgba(180, 120, 160, 0.65);
+}
+
+.s-wave:nth-child(4) {
+  color: rgba(120, 170, 220, 0.45);
+}
+
+.s-wave:nth-child(5) {
+  color: rgba(80, 210, 255, 0.35);
+}
+/* ================================
+   S PULSE ANIMATION
+================================ */
+@keyframes sPulse {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.06);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* ================================
+   SIDEBAR HOME → S INTERACTION
+================================ */
+
+/* When hovering Home, pulse the S */
+.sidebar-nav a[href="index.html"]:hover ~ * .s-wave-container,
+.sidebar-nav a.active ~ * .s-wave-container {
+  animation: sPulse 0.6s ease;
+}
+/* ================================
+   LIQUID WAVE WOBBLE
+================================ */
+@keyframes waveWobble {
+  0% {
+    transform: translateZ(var(--z)) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translateZ(var(--z)) rotate(0.6deg) scale(1.01);
+  }
+  50% {
+    transform: translateZ(var(--z)) rotate(-0.6deg) scale(0.995);
+  }
+  75% {
+    transform: translateZ(var(--z)) rotate(0.4deg) scale(1.005);
+  }
+  100% {
+    transform: translateZ(var(--z)) rotate(0deg) scale(1);
+  }
+}
+/* ================================
+   IDLE LIQUID MOTION
+================================ */
+.s-wave {
+  animation:
+    waveSpin 16s linear infinite,
+    waveWobble 6s ease-in-out infinite;
+}
+/* ================================
+   HOVER – STRONGER LIQUID FEEL
+================================ */
+.brand-title:hover .s-wave {
+  animation:
+    waveSpin 12s linear infinite,
+    waveWobble 3.2s ease-in-out infinite;
+}
+/* ================================
+   CURSOR-SYNCED DIRECTIONAL WOBBLE
+================================ */
+.brand-s {
+  --tiltX: 0deg;
+  --tiltY: 0deg;
+
+  transform-style: preserve-3d;
+  transform:
+    rotateX(var(--tiltX))
+    rotateY(var(--tiltY));
+  transition: transform 0.12s ease-out;
+}
+
+/* Opposite motion for waves */
+.s-wave {
+  transform-style: preserve-3d;
+  transform:
+    rotateX(calc(var(--tiltX) * -1))
+    rotateY(calc(var(--tiltY) * -1))
+    translateZ(var(--z));
+}
+/* ================================
+   PULSE RIPPLE (HOME CLICK)
+================================ */
+.brand-s::before {
+  content: "";
+  position: absolute;
+  inset: -60%;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(88, 200, 255, 0.6),
+    transparent 70%
+  );
+  opacity: 0;
+  transform: scale(0.4);
+  pointer-events: none;
+}
+
+/* Trigger pulse */
+.brand-s.pulse::before {
+  animation: pulseRipple 0.9s ease-out forwards;
+}
+
+@keyframes pulseRipple {
+  0% {
+    opacity: 0.7;
+    transform: scale(0.4);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.8);
+  }
+}
+/* ================================
+   S WAVE CORE (RED)
+================================ */
+.s-wave-container {
+  position: relative;
+  width: 260px;
+  height: 260px;
+  perspective: 1200px;
+  transform-style: preserve-3d;
+}
+
+.s-wave {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 160px;
+  font-weight: 800;
+  font-family: 'Space Grotesk', sans-serif;
+
+  transform-style: preserve-3d;
+  transform:
+    translateZ(var(--z))
+    rotateX(var(--rx, 0deg))
+    rotateY(var(--ry, 0deg));
+
+  transition: transform 0.15s ease-out;
+}
+
+/* Red core S */
+.s-wave:first-child {
+  color: #ff4d4d;
+  text-shadow:
+    0 0 20px rgba(255, 77, 77, 0.6),
+    0 0 50px rgba(255, 77, 77, 0.4);
+}
+
+/* Cyan wave layers */
+.s-wave:not(:first-child) {
+  color: rgba(80, 220, 255, 0.85);
+  filter: blur(1px);
+  text-shadow:
+    0 0 25px rgba(80, 220, 255, 0.6);
+}
+
+/* ================================
+   LIQUID WOBBLE (IDLE)
+================================ */
+@keyframes liquidWobble {
+  0%   { transform: translateZ(var(--z)) rotateZ(0deg); }
+  50%  { transform: translateZ(var(--z)) rotateZ(0.6deg); }
+  100% { transform: translateZ(var(--z)) rotateZ(0deg); }
+}
+
+.s-wave {
+  animation: liquidWobble 4s ease-in-out infinite;
+}
+
+/* ================================
+   PULSE RIPPLE (ON HOME CLICK)
+================================ */
+@keyframes pulseRipple {
+  0% {
+    transform: scale(1);
+    filter: brightness(1);
+  }
+  50% {
+    transform: scale(1.06);
+    filter: brightness(1.35);
+  }
+  100% {
+    transform: scale(1);
+    filter: brightness(1);
+  }
+}
+
+.s-wave-container.pulse {
+  animation: pulseRipple 0.6s ease-out;
+}
+/* ================================
+   LIQUID S – ADVANCED PHYSICS
+================================ */
+
+.s-wave-container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  perspective: 1400px;
+  transform-style: preserve-3d;
+}
+
+/* S layers */
+.s-wave {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 190px;
+  font-weight: 800;
+  font-family: 'Space Grotesk', sans-serif;
+
+  transform-style: preserve-3d;
+  transform:
+    translate3d(var(--mx, 0px), var(--my, 0px), var(--z))
+    rotateX(var(--rx, 0deg))
+    rotateY(var(--ry, 0deg))
+    scale(var(--scale, 1));
+
+  transition:
+    filter 0.3s ease,
+    text-shadow 0.3s ease;
+}
+
+/* RED CORE */
+.s-wave:first-child {
+  color: #ff4d4d;
+  text-shadow:
+    0 0 18px rgba(255, 77, 77, 0.7),
+    0 0 45px rgba(255, 77, 77, 0.45);
+  z-index: 5;
+}
+
+/* CYAN WAVES */
+.s-wave:not(:first-child) {
+  color: rgba(90, 230, 255, 0.75);
+  filter: blur(1.6px);
+  text-shadow:
+    0 0 40px rgba(90, 230, 255, 0.65);
+}
+
+/* BREAKUP STATE */
+.s-wave.break {
+  filter: blur(3px);
+}
+
+/* IDLE LIQUID MOTION */
+@keyframes liquidDrift {
+  0%   { transform: translateZ(var(--z)) rotateZ(0deg); }
+  50%  { transform: translateZ(var(--z)) rotateZ(1.5deg); }
+  100% { transform: translateZ(var(--z)) rotateZ(0deg); }
+}
+
+.s-wave {
+  animation: liquidDrift 7s ease-in-out infinite;
+}
+
+/* PULSE RIPPLE */
+@keyframes pulseRipple {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+.s-wave-container.pulse {
+  animation: pulseRipple 0.7s cubic-bezier(.22,.61,.36,1);
+}
+/* =========================
+   LIGHT MODE (PREMIUM)
+========================= */
+body.light {
+    --bg-main: #f1f5f9;
+    --bg-card: #ffffff;
+    --bg-soft: #e2e8f0;
+
+    --text-main: #020617;
+    --text-muted: #475569;
+
+    --border: rgba(2, 6, 23, 0.12);
+}
+
+/* Light mode cards */
+body.light .page,
+body.light .welcome-section,
+body.light .template-card,
+body.light .task-panel {
+    background: linear-gradient(
+        180deg,
+        rgba(255,255,255,0.95),
+        rgba(241,245,249,0.95)
+    );
+    box-shadow: 0 30px 60px rgba(2,6,23,0.12);
+}
+
+/* Light sidebar */
+body.light .sidebar {
+    background: linear-gradient(
+        180deg,
+        #ffffff,
+        #f1f5f9
+    );
+}
+
+/* Light buttons */
+body.light .btn.primary {
+    background: linear-gradient(135deg, #38bdf8, #22d3ee);
+    color: #020617;
+}
+
+/* Active sidebar item */
+body.light .sidebar-nav a.active {
+    background: rgba(56,189,248,0.25);
+    color: #0284c7;
+}
+

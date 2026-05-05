@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>SUMN – Work Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">SUMN</div>
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../todo.html">Tasks</a>
+        <a href="../templates.html" class="active">Templates</a>
+        <a href="../stats.html">Stats</a>
+        <a href="../settings.html">Settings</a>
+    </nav>
+</header>
+
+<main class="page">
+    <h1>Work Template</h1>
+    <p>Manage professional tasks efficiently.</p>
+
+    <div class="template-card">
+        <h3>Suggested Tasks</h3>
+        <ul class="task-list">
+            <li>Check emails</li>
+            <li>Team meeting</li>
+            <li>Work on deliverables</li>
+            <li>Client follow-up</li>
+            <li>Daily report</li>
+        </ul>
+
+        <br />
+
+        <a href="../todo.html"
+           onclick="localStorage.setItem('prefill',
+             JSON.stringify([
+               'Check emails',
+               'Team meeting',
+               'Work on deliverables',
+               'Client follow-up',
+               'Prepare daily report'
+             ])
+           )"
+           class="btn primary">
+           Use this template
+        </a>
+    </div>
+</main>
+
+<footer class="footer">
+    <p>Focus. Execute. Deliver.</p>
+</footer>
+
+</body>
+</html>
+

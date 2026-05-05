@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>SUMN – Stats</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="app-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <div class="sidebar-logo">SUMN</div>
+        <nav class="sidebar-nav">
+            <a href="index.html">🏠 Home</a>
+            <a href="todo.html">📝 Tasks</a>
+            <a href="templates.html">📂 Templates</a>
+            <a href="stats.html" class="active">📊 Stats</a>
+            <a href="settings.html">⚙ Settings</a>
+        </nav>
+    </aside>
+
+    <!-- MAIN -->
+    <div class="app-main">
+
+        <section class="page">
+            <h1>Productivity Stats</h1>
+            <p class="text-muted">
+                Your progress at a glance.
+            </p>
+
+            <div class="templates-grid">
+                <div class="template-card">
+                    <h3>Total Tasks</h3>
+                    <p id="totalTasks">0</p>
+                </div>
+
+                <div class="template-card">
+                    <h3>Completed</h3>
+                    <p id="completedTasks">0</p>
+                </div>
+
+                <div class="template-card">
+                    <h3>Active</h3>
+                    <p id="activeTasks">0</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
+

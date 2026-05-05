@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Welcome – SUMN</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="app.js" defer></script>
+</head>
+
+<body>
+<div class="app-layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="brand-logo">
+      <div class="brand-name">SUMN</div>
+      <div class="brand-tagline">[ sum of your day ]</div>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a href="welcome.html" class="active">👋 Welcome</a>
+      <a href="todo.html">📝 Tasks</a>
+      <a href="stats.html">📊 Stats</a>
+      <a href="settings.html">⚙ Settings</a>
+    </nav>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="app-main">
+    <section class="page welcome-page">
+
+      <!-- HERO -->
+      <h1>Welcome to <span style="color:#38bdf8;">SUMN</span></h1>
+      <p class="text-muted">Aight twin, here’s how SUMN helps you lock in.</p>
+      <p class="text-muted">
+        A calm space to organize your day, your goals, and your momentum.
+      </p>
+
+      <!-- TODOIST-STYLE STATS -->
+      <div class="template-card">
+        <h3>📊 Your productivity snapshot</h3>
+
+        <div class="stats-preview">
+          <div class="stat-card">
+            <h2 class="counter" data-target="128">0</h2>
+            <p class="text-muted">Tasks Completed</p>
+          </div>
+
+          <div class="stat-card">
+            <h2 class="counter" data-target="14">0</h2>
+            <p class="text-muted">Day Streak</p>
+          </div>
+
+          <div class="stat-card">
+            <h2 class="counter" data-target="92">0</h2>
+            <p class="text-muted">Completion Rate (%)</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- SVG PRODUCTIVITY CHART -->
+      <div class="template-card">
+        <h3>📈 Weekly Productivity Overview</h3>
+
+        <svg width="100%" height="220" viewBox="0 0 600 220">
+          <polyline
+            points="40,160 120,120 200,140 280,90 360,110 440,70 520,60"
+            fill="none"
+            stroke="#38bdf8"
+            stroke-width="4" />
+
+          <g fill="#38bdf8">
+            <circle cx="40" cy="160" r="5"/>
+            <circle cx="120" cy="120" r="5"/>
+            <circle cx="200" cy="140" r="5"/>
+            <circle cx="280" cy="90" r="5"/>
+            <circle cx="360" cy="110" r="5"/>
+            <circle cx="440" cy="70" r="5"/>
+            <circle cx="520" cy="60" r="5"/>
+          </g>
+        </svg>
+
+        <p class="text-muted">
+          Simulated productivity growth across a 7-day cycle
+        </p>
+      </div>
+
+      <!-- WHY SUMN -->
+      <div class="template-card">
+        <h3>✨ Why SUMN exists</h3>
+        <p class="text-muted">
+          Many productivity tools overwhelm users with complex interfaces
+          and unnecessary features.
+        </p>
+        <p class="text-muted">
+          SUMN focuses on clarity, consistency, and sustainable progress.
+        </p>
+      </div>
+
+      <!-- FEATURES -->
+      <div class="template-card">
+        <h3>⚡ Core Features</h3>
+        <ul class="text-muted" style="line-height:1.8; padding-left:18px;">
+          <li>Simple task creation and completion</li>
+          <li>Optional reminders for important work</li>
+          <li>Visual statistics for reflection</li>
+          <li>Minimal, distraction-free interface</li>
+        </ul>
+      </div>
+
+      <!-- FUTURE -->
+      <div class="template-card">
+        <h3>🔮 Future Scope</h3>
+        <p class="text-muted">
+          Planned improvements include backend synchronization,
+          secure authentication, AI-assisted prioritization,
+          and cross-device access.
+        </p>
+      </div>
+
+      <!-- CTA -->
+      <div style="margin-top:40px;">
+        <a href="todo.html" class="btn primary">
+          Start my day →
+        </a>
+      </div>
+
+    </section>
+  </main>
+</div>
+
+<!-- COUNTER ANIMATION -->
+<script>
+document.querySelectorAll('.counter').forEach(counter => {
+  const target = Number(counter.dataset.target);
+  let current = 0;
+
+  const update = () => {
+    if (current < target) {
+      current += Math.ceil(target / 80);
+      if (current > target) current = target;
+      counter.textContent = current;
+      requestAnimationFrame(update);
+    }
+  };
+  update();
+});
+</script>
+
+</body>
+</html>
+
